@@ -1,0 +1,350 @@
+@import "reset.less";
+@import "var.less";
+@import "../fonts/stylesheet.css";
+
+/* =========================================================================================
+
+GLOBAL
+
+========================================================================================= */
+html	{
+	
+}
+body	{
+	background:url(../img/lightpaperfibers.png) top center repeat @white;
+	color:@bodyColor;
+	font-size:16px;
+	font-family:"ubunturegular",Helvetica,Arial,sans-serif;
+	line-height:1.7;
+}
+
+/* =========================================================================================
+
+NAVIGATION
+
+========================================================================================= */
+.navbar					{
+							.gradientBar(@navGradTop, @navGradBot);
+							border-bottom: 1px solid (lighten(@navColor, -55%));
+							position:fixed;
+							height:52px;width:100%;
+							z-index:2;
+							box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
+							-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
+							-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
+							//display:none;
+						}
+	.navbarInner		{
+							width:@siteWidthFull;
+							margin:0 auto;
+						}
+		.navbarInner a.brand			{float:left;padding:12px 10px 12px 20px;color:@white;}
+		.navbarInner a.brand:hover		{text-decoration:none;}
+		
+		ul.nav			{float: left;}
+		ul.nav li		{float: left;padding:12px 10px 0;}
+		ul.nav li a		{color: @grayLighter;}
+		
+		.navbarInner a.title		{color:@grayLight;padding:12px 10px;display:inline-block;}
+			.navbarInner a:hover	{text-decoration:none;color:@white;}
+			
+		.navbarInner a.pictos		{font-size:1.5em;color:@grayLight;padding:2px 10px 10px;display:none;}
+			
+/* =========================================================================================
+
+MAIN ELEMENTS
+
+========================================================================================= */			
+.intro					{
+							width:100%;position:fixed;height:350px;z-index:1;padding:100px 0 0;
+						}
+	.introInner			{
+							width:@siteWidthFull;margin:0 auto;text-align:center;
+						}
+.wrapper				{
+							//width:100%;z-index:10;padding:380px 0 30px;position:relative;
+							width:100%;padding:52px 0 0;
+						}
+	.container			{
+							
+						}
+		.sliderWrap		{
+							width:100%;height:150px;
+							background:url(../img/noisy_net.png) top center repeat @black;
+							overflow:hidden;
+							box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
+							-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
+							-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
+						}
+		.articleWrap	{
+							width:@siteWidthFull;margin:0 auto;padding:20px;
+						}
+						
+						
+pre {
+		margin: 0;
+		background:url(../img/noisy_net.png) top center repeat @grayDarker;
+		border: 0;
+		color: @white;
+		padding: 15px;
+		//border: 1px dashed @gray;
+		font-family: Courier, monospace !important;
+		overflow:auto;
+		width:100%;
+	}
+/* =========================================================================================
+
+FOOTER
+
+========================================================================================= */
+	
+
+/* =========================================================================================
+
+TYPOGRAPHY
+
+========================================================================================= */
+
+@font-face {
+	font-family: 'Pictos';
+	src: url('../icons/pictos-web.eot');
+	src: local('☺'), url('../icons/pictos-web.woff') format('woff'),url('../icons/pictos-web.ttf') format('truetype'), url('../icons/pictos-web.svg#webfontphKv1xv9') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+	.pictos {font-family:"Pictos";font-weight:normal;line-height:0;text-shadow:none;}
+
+
+/* -------------------------------------------------------
+Headers
+------------------------------------------------------- */
+h1, h2, h3, h4, h5		{color:@headerColor;font-weight:normal;text-transform:uppercase;letter-spacing:2px;}
+h1{
+	font-size:1.8em;
+	line-height:1.2;
+	margin-bottom:0.2em;
+}
+h2{
+	font-size:1.5em;
+	line-height:1.2;
+	margin-bottom:0.2em;
+}
+h3{
+	font-size:1.3em;
+	line-height:1.2;
+	margin-bottom:0.2em;
+}
+h4{
+	font-size:1.15em;
+	line-height:1.2;
+	margin-bottom:0.1em;
+}
+
+p,address	{margin-bottom:1.5em;font-size:1em;}
+p+p			{margin-top:-1em;}
+
+em			{font-style:italic;font-weight:normal;font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;}
+strong		{font-weight:normal;font-family:"ubuntubold",Helvetica,Arial,sans-serif;}
+
+a						{color:@linkColor;text-decoration:none;}
+a:hover					{color:@linkColorHover;text-decoration:underline;}
+
+.superscript			{vertical-align:super;font-size:70%;} 
+.subscript				{vertical-align:bottom;font-size:70%;} 
+
+::selection 			{background:@themeColor;color:@white;}
+::-moz-selection		{background:@themeColor;color:@white;}
+
+/* =========================================================================================
+
+BUTTONS
+
+========================================================================================= */
+.btn		{
+	.noSelect;
+	.roundCorners(5px);
+	padding:8px 12px 8px;
+	/* Border colour variable is found in var.less - .gradientBar */
+	border-style: solid;
+	border-width: 2px;
+	color:@grayDark;
+	font-weight:normal;
+	font-size:14px;
+	font-weight:bold;
+	line-height:14px;
+	.transition(.1s linear all);
+	.gradientBar(@grayLighter, @grayLight);
+	text-shadow: 0 -1px 0 (@white - 40%);
+	text-align:center;
+	cursor: pointer;
+	display:inline-block;
+	margin-bottom:15px;
+	text-transform: uppercase;
+	letter-spacing:2px;
+	/* Icons */
+	.pictos {
+		text-shadow: 0 -1px 0 (@white - 40%);
+	}
+	/* Lets look at our peusdo classes */
+	&:hover {
+		background-position: 0 -15px;
+		text-decoration: none;
+		color:@grayDark;
+	}
+	&:focus {
+		//outline: 1px dotted #666;
+	}
+	&.large {
+		padding:10px 20px;
+		font-size:1.2em;
+		margin-bottom:0.2em;
+		.roundCorners(6px);
+	}
+	&.large:hover {
+		background-position: 0 -30px;
+	}
+	&.success {
+		color: @white;
+		.gradientBar(@green, @greenDark);
+		text-shadow: 0 -1px 0 (@gray - 40%);
+	}
+	&.info {
+		color: @white;
+		.gradientBar(@themeColor, @themeColorDark);
+		text-shadow: 0 -1px 0 (@themeColorDark - 40%);
+		.pictos {text-shadow: 0 -1px 0 (@themeColorDark - 40%);}
+	}
+	&.alert {
+		color: @white;
+		.gradientBar(@red, @redDark);
+		text-shadow: 0 -1px 0 (@redDark - 40%);
+		.pictos {text-shadow: 0 -1px 0 (@redDark - 40%);}
+	}
+	&.active,
+	&:active {
+		@shadow: inset 0 2px 4px rgba(0,0,0,.25), 0 1px 2px rgba(0,0,0,.05);
+		.box-shadow(@shadow);
+		background-position: 0 -15px;
+	}
+	&.disabled {
+		cursor: default;
+		background-image: none;
+		.reset-filter();
+		.opacity(65);
+		.box-shadow(none);
+		.noSelect;
+	}
+	&[disabled] {
+		cursor: default;
+		background-image: none;
+		.reset-filter();
+		.opacity(65);
+		.box-shadow(none);
+		.noSelect;
+	}
+}
+.btnGroup			{margin:0 0 10px;float:left;}
+	.btnGroup .btn 	{
+		.roundCorners(0px);
+		float:left;
+		border-right-width:1px;
+	}
+		.btnGroup .btn:first-child {
+			.roundCorners(3px 0 0 3px);
+			//border-right-width:1px;
+		}
+		.btnGroup .btn:last-child {
+			.roundCorners(0 3px 3px 0);
+			//border-right-width:0;
+		}
+		.btnGroup .btn:active,
+		.btnGroup .btn.active {
+			border-bottom-width:1px;
+		}
+
+/* =========================================================================================
+
+IOS SLIDER
+
+========================================================================================= */
+/* slider container */
+.iosSlider {
+	/* required */
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 600px;
+	
+	//display:none;
+}
+
+/* slider */
+.iosSlider .slider {
+	/* required */
+	width: 100%;
+	height: 100%;
+}
+
+/* slide */
+.iosSlider .slider .slide {
+	/* required */
+	float: left;
+	margin:0 20px 0 0;
+	width: 900px;
+	height: 600px;
+	opacity:0.8;
+	.transition(.2s linear all);
+	overflow:hidden;
+	&:hover {
+		opacity:1;
+	}
+	&.last {
+		margin:0;
+	}
+}
+
+.iosSliderButtons {
+	padding:15px 20px 0 0;
+	float:right;
+	margin:0 auto;
+}
+.iosSliderButtons .button {
+	float:left;
+	width: 10px;
+	height: 10px;
+	background: #999;
+	margin: 0 10px 0 0;
+	opacity: 0.25;
+	.roundCorners(30px);
+}
+.iosSliderButtons .selected {
+	background: #fff;
+	opacity: 1;
+}
+		
+/* =========================================================================================
+
+MOBILE
+
+========================================================================================= */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+	
+}
+@media screen and (max-width: 480px) {
+	body	{font-size:1.1em;}
+	
+	.navbarInner .brand 	{display:none;}
+	.navbarInner			{text-align:center;}
+	.navbarInner a.title	{display:none;}
+	.navbarInner a.pictos	{display:inline-block;line-height:1;}
+	
+	.navbarInner, .articleWrap 	{width:100%;}
+	
+	.iosSlider .slider .slide 	{width:90%;margin:0;}
+}
+
+
+
+
