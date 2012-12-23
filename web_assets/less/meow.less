@@ -69,18 +69,37 @@ MAIN ELEMENTS
 							
 						}
 		.sliderWrap		{
-							width:100%;height:150px;
-							background:url(../img/noisy_net.png) top center repeat @black;
+							width:100%;height:400px;
+							background:url(../img/noisy_net.png) top center repeat @themeColor;
 							overflow:hidden;
-							box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
-							-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
-							-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
 						}
 		.articleWrap	{
 							width:@siteWidthFull;margin:0 auto;padding:20px;
 						}
+#footerWrapper			{
+							width:100%;padding:20px;
+						}
+	#footerWrapperInner	{
+							width:@siteWidthFull;margin:0 auto 20px;
+						}
+	#footerWrapper ul 	{
+							list-style: none;
+							margin: 0.75em 0 0;
+						}
+	#footerWrapper li 	{
+							display: block;
+							float: left;
+							line-height: 1;
+							padding: 0 0.7em 0 0;
+							
+						&:first-child 	{
+											border-left: 0 none;
+											padding-left: 0;
+										}
+						}
 						
 						
+/*
 pre {
 		margin: 0;
 		background:url(../img/noisy_net.png) top center repeat @grayDarker;
@@ -91,7 +110,10 @@ pre {
 		font-family: Courier, monospace !important;
 		overflow:auto;
 		width:100%;
-	}
+		.roundCorners(5px);
+		border:2px solid lighten(@themeColor, -10%);
+	}*/
+.code .toolbar {display:none;}
 /* =========================================================================================
 
 FOOTER
@@ -269,36 +291,26 @@ IOS SLIDER
 ========================================================================================= */
 /* slider container */
 .iosSlider {
-	/* required */
 	position: relative;
 	top: 0;
 	left: 0;
 	overflow: hidden;
 	width: 100%;
-	height: 600px;
-	
-	//display:none;
+	height: 500px;
 }
-
-/* slider */
 .iosSlider .slider {
-	/* required */
 	width: 100%;
 	height: 100%;
 }
-
-/* slide */
 .iosSlider .slider .slide {
-	/* required */
 	float: left;
-	margin:0 20px 0 0;
+	//margin:0 20px 0 0;
 	width: 900px;
-	height: 600px;
-	opacity:0.8;
+	height: 500px;
 	.transition(.2s linear all);
 	overflow:hidden;
 	&:hover {
-		opacity:1;
+		
 	}
 	&.last {
 		margin:0;
@@ -323,26 +335,150 @@ IOS SLIDER
 	background: #fff;
 	opacity: 1;
 }
+
+/* =========================================================================================
+
+SYNTAX HIGHLIGHT
+
+========================================================================================= */
+.syntaxhighlighter {
+  background:url(../img/noisy_net.png) top center repeat @themeColor;
+  .roundCorners(5px);
+  padding:0;
+}
+.syntaxhighlighter .line.alt1 {
+  //background-color: #0f192a !important;
+	//background: rgba(255, 255, 255, 0.05) !important;
+}
+.syntaxhighlighter .line.alt2 {
+  //background-color: #0f192a !important;
+}
+.syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
+  background-color: #253e5a !important;
+}
+.syntaxhighlighter .line.highlighted.number {
+  color: #38566f !important;
+}
+.syntaxhighlighter table caption {
+  color: #d1edff !important;
+}
+.syntaxhighlighter .gutter {
+  color: #afafaf !important;
+}
+.syntaxhighlighter .gutter .line {
+  border-right: 3px solid #435a5f !important;
+}
+.syntaxhighlighter .gutter .line.highlighted {
+  background-color: #435a5f !important;
+  color: #0f192a !important;
+}
+.syntaxhighlighter.printing .line .content {
+  border: none !important;
+}
+.syntaxhighlighter.collapsed {
+  overflow: visible !important;
+}
+.syntaxhighlighter.collapsed .toolbar {
+  color: #428bdd !important;
+  background: black !important;
+  border: 1px solid #435a5f !important;
+}
+.syntaxhighlighter.collapsed .toolbar a {
+  color: #428bdd !important;
+}
+.syntaxhighlighter.collapsed .toolbar a:hover {
+  color: #1dc116 !important;
+}
+.syntaxhighlighter .toolbar {
+  color: #d1edff !important;
+  background: #435a5f !important;
+  border: none !important;
+}
+.syntaxhighlighter .toolbar a {
+  color: #d1edff !important;
+}
+.syntaxhighlighter .toolbar a:hover {
+  color: #8aa6c1 !important;
+}
+.syntaxhighlighter .plain, .syntaxhighlighter .plain a {
+  color: #d1edff !important;
+}
+.syntaxhighlighter .comments, .syntaxhighlighter .comments a {
+  color: #428bdd !important;
+}
+.syntaxhighlighter .string, .syntaxhighlighter .string a {
+  color: #1dc116 !important;
+}
+.syntaxhighlighter .keyword {
+  color: #c43c35 !important;
+}
+.syntaxhighlighter .preprocessor {
+  color: #8aa6c1 !important;
+}
+.syntaxhighlighter .variable {
+  color: #ffaa3e !important;
+}
+.syntaxhighlighter .value {
+  color: #b6944a !important;
+}
+.syntaxhighlighter .functions {
+  color: #ffaa3e !important;
+}
+.syntaxhighlighter .constants {
+  color: #e0e8ff !important;
+}
+.syntaxhighlighter .script {
+  font-weight: bold !important;
+  color: #b43d3d !important;
+  background-color: none !important;
+}
+.syntaxhighlighter .color1, .syntaxhighlighter .color1 a {
+  color: #f8bb00 !important;
+}
+.syntaxhighlighter .color2, .syntaxhighlighter .color2 a {
+  color: white !important;
+}
+.syntaxhighlighter .color3, .syntaxhighlighter .color3 a {
+  color: #ffaa3e !important;
+}
 		
 /* =========================================================================================
 
 MOBILE
 
 ========================================================================================= */
-@media screen and (min-width: 481px) and (max-width: 767px) {
-	
-}
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
+	/* For general iPad layouts */
 	body	{font-size:1.1em;}
 	
-	.navbarInner .brand 	{display:none;}
+	//.navbarInner .brand 	{display:none;}
 	.navbarInner			{text-align:center;}
 	.navbarInner a.title	{display:none;}
 	.navbarInner a.pictos	{display:inline-block;line-height:1;}
 	
-	.navbarInner, .articleWrap 	{width:100%;}
+	.navbarInner,
+	.articleWrap,
+	#footerWrapperInner		{width:100%;}
 	
-	.iosSlider .slider .slide 	{width:90%;margin:0;}
+	.iosSlider 				{height:500px;}
+	
+	.iosSlider .slider .slide 	{width:718px}
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+	/* For portrait layouts only */
+	body	{font-size:1.1em;}
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+	/* For landscape layouts only */
+	body	{font-size:1.1em;}
+}
+
+@media screen and (max-width: 480px) {
+	/* iPhone layout */
+	.sliderWrap,
+	.iosSlider 				{height:200px;}
 }
 
 

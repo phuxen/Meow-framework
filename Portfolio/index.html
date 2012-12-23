@@ -7,20 +7,35 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		
-		<!-- CSS -->
+		<!--
+		CSS
+		-->
 		<link href="../web_assets/css/meow.css" rel="stylesheet">
 		
-		<!-- JAVASCRIPT -->
+		<!--
+		JAVASCRIPT
+		-->
 		<script src="../web_assets/js/jquery.js"></script>
-		<!-- Slider -->
 		<script src="../web_assets/js/jquery.iosslider.js"></script>
-		<!-- Other -->
 		<script src="../web_assets/js/meow.js"></script>
 		
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
 		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+		
+		
+		
+		<!-- Syntax highlighter -->
+		<script type="text/javascript" src="../web_assets/syntax/shCore.js"></script>
+		<script type="text/javascript" src="../web_assets/syntax/shBrushCss.js"></script>
+		<!-- Include *at least* the core style and default theme -->
+		<link href="../web_assets/syntax/shCore.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript">
+		     SyntaxHighlighter.all()
+		</script>
+		
+		
 		
 		<!-- Fav and touch icons -->
 		<link rel="shortcut icon" href="../web_assets/ico/favicon.ico">
@@ -66,7 +81,16 @@
 								<img src="http://placekitten.com/g/900/600" />
 							</div>
 						</div>
+						<!-- /slider -->
 						<!--
+						<div class = 'prevContainer'>
+							<div class = 'prev'>Prev slide</div>
+						</div>
+						
+						<div class = 'nextContainer'>
+							<div class = 'next'>Next slide</div>
+						</div>
+						
 						<ul class="iosSliderButtons">
 							<li class="button"></li>
 							<li class="button"></li>
@@ -80,14 +104,14 @@
 		    	<!-- /Slider -->
 				<div class="articleWrap">
 					<h1>Oh hello there&hellip;</h1>
-					<p>I'm a designer, I create things. Always have done ever since I broke out a box of crayons and drew all over the walls. Thankfully now I don't draw on walls, I design for fashion labels or throw out a typeface through my font foundry – Kraken.</p>
-					<p>I'll be found creating a UI for a webmail service using HTML5, CSS3 and {LESS}, or knocking up some advertising and web banners in the Adobe CS5 suite.</p>
+					<p>I'm a designer. Always have been ever since I broke out a box of crayons and drew all over the walls. Thankfully now I don't draw on walls, I design for <a href="kids.html" title="Let the Kids Dance" target="_parent">fashion labels</a> or throw out a typeface through my font foundry &ndash; <a href="http://www.krakenfoundry.co.uk" title="Kraken font foundry" target="_blank">Kraken</a>.</p>
+				<p>I'll be found creating a UI for a webmail service using <strong>HTML5, CSS3</strong> and <strong>{LESS}</strong>, or knocking up some advertising and web banners in the <strong>Adobe CS5 suite</strong>.</p>
 					<a class="btn">Default button</a> <a class="btn info">Info button</a>
 					<br />
 					<a class="btn alert">Alert button</a> <a class="btn success">Success button</a> 
 					<p>Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio.</p>
 					<div class="code">
-						<pre>
+						<pre class="brush: css; gutter: false;">
 .iosSliderButtons {
 	padding:15px 20px 0 0;
 	float:right;
@@ -135,6 +159,20 @@
 					<p>Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio.</p>
 				</div>
 				<!-- /articleWrap -->
+				
+				<div id="footerWrapper">
+					<div id="footerWrapperInner">
+						<ul>
+							<li><a title="Compare our music tastes on Last.fm" href="http://www.last.fm/user/twiggy8520" target="_blank">Last.fm</a></li>
+							<li><a title="Visit my LinkedIn profile" href="http://www.linkedin.com/in/paulhuxen" target="_blank">LinkedIn</a></li>
+							<li><a title="Stalk me on Foursquare" href="http://foursquare.com/phuxen" target="_blank">Foursquare</a></li>
+							<li><a title="Listen to my music on Soundcloud" href="http://www.soundcloud.com/gillsanseric" target="_blank">Soundcloud</a></li>
+							<li><a title="tweet @phuxen on twitter" href="http://www.twitter.com/phuxen" target="_blank">Twitter</a></li>
+							<li><a title="Watch my videos on Vimeo" href="http://www.vimeo.com/phuxen" target="_blank">Vimeo</a></li>
+						</ul>
+						<p><br />&copy; 2013 Paul Huxen</p>
+					</div>
+				</div>
 				
 			</div><!-- container -->
 		</div><!-- wrapper -->

@@ -32,6 +32,29 @@ document.createElement("nav");
 	}
 })(jQuery);
 
+/* Slider container height change */
+	/*function checkSize(){
+		if ( $(window).width() > 768 ){			
+			$(".sliderWrap").hover(
+				function() {
+					$(this).stop().animate({
+						height: '500px'
+						}, 'slow'
+					);
+				},
+				function() {
+					$(this).stop().animate({
+						height: '150px'
+						}, 'slow'
+					);
+				}
+			);
+		}
+		else {
+			$(".sliderWrap").css("height","300px");
+		}
+	}*/
+
 $(document).ready(function($){
 	
 	// SLIDER AND SHIZ
@@ -44,11 +67,13 @@ $(document).ready(function($){
 		scrollbarBorderRadius: 4,
 		scrollbarHeight: '5px',
 		responsiveSlideWidth: true,
+		navNextSelector: $('.next'),
+		navPrevSelector: $('.prev'),
 		navSlideSelector: $('.iosSliderButtons .button'),
 		infiniteSlider: false,
 		onSlideChange: slideContentChange,
 		onSlideComplete: slideContentComplete,
-		onSliderLoaded: slideContentLoaded
+		onSliderLoaded: slideContentLoaded,
 	});
 	
 	function slideContentChange(args) {
@@ -74,22 +99,13 @@ $(document).ready(function($){
 	/* Drop our retina detection script */
 	$.highdpi_init();
 	
-	/* Slider container height change */
+	/* SLider fix */
 	$(".iosSlider").css("height","500px");
 	
-	$(".sliderWrap").hover(
-		function() {
-			$(this).stop().animate({
-				height: '500px'
-				}, 'slow'
-			);
-		},
-		function() {
-			$(this).stop().animate({
-				height: '150px'
-				}, 'slow'
-			);
-		}
-	);
+	//Add a listener to check the size of the document when you load
+	$(document).resize(checkSize);
+	
+	//Check the size now.
+	checkSize();
 	
 });
