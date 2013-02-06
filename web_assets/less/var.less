@@ -29,25 +29,29 @@
 @pink:              #c3325f;
 @purple:            #7a43b6;
 
-	@themeColor:		#3a547b; /*#00b36a;*/
+	@themeColor:		@blue; //3a547b
 	@themeColorDark:	lighten(@themeColor, -10%);
 	
 	@backgroundColor:	lighten(@themeColor, 50%);
 	
 	@navColor:			@grayDark;
 	
-	// Typography
-	@headerColor:		#29343f;
-	@bodyColor:			#3a546f;
-	
-	// Links
-	@linkColor:         #b6944a;
-	@linkColorHover:    lightness(#b6944a, 10%);
+/* -----------------------------------------------------------------------------------------
+	Typography
+----------------------------------------------------------------------------------------- */
+@headerColor:		#00142a; /*29343f*/
+@bodyColor:			#3a546f;
+
+// Links
+@linkColor:         @themeColor;
+@linkColorHover:    lightness(#b6944a, 10%);
+
+@bodyFontSize:		16px;
 	
 	// Navigation
-	@navGradTop:		#3a547b;
+	@navGradTop:		@themeColor;
 	@navGradBot:		lighten(@navGradTop, -10%);
-	@navGradHover:   	lighten(@navGradTop, -10%);    
+	@navGradHover:   	lighten(@navGradTop, -20%);    
 	
 	// Buttons
 	@btnPrimary:		@themeColor;
@@ -108,7 +112,8 @@ Useful classes
   #gradient > .vertical(@primaryColor, @secondaryColor);
   /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
   /* This adjusts the colour of our buttons */
-  border-color: darken(@secondaryColor, 2%);
+  border-color: darken(@secondaryColor, 10%);
+  /*box-sizing: content-box;*/
 }
 .noSelect {
     -webkit-touch-callout: none;
@@ -146,7 +151,7 @@ Useful classes
 	border-radius: @radius;  
 }
 .displayNone {
-	display:none;
+	display:none!important;
 }
 .displayBlock {
 	display:block;

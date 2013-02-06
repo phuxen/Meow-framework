@@ -67,8 +67,8 @@ $(document).ready(function($){
 		scrollbarBorderRadius: 4,
 		scrollbarHeight: '5px',
 		responsiveSlideWidth: true,
-		navNextSelector: $('.next'),
-		navPrevSelector: $('.prev'),
+		navNextSelector: $('.nextButton'),
+		navPrevSelector: $('.prevButton'),
 		navSlideSelector: $('.iosSliderButtons .button'),
 		infiniteSlider: false,
 		onSlideChange: slideContentChange,
@@ -77,11 +77,9 @@ $(document).ready(function($){
 	});
 	
 	function slideContentChange(args) {
-					
 		/* indicator */
 		$('.iosSliderButtons .button').removeClass('selected');
 		$('.iosSliderButtons .button:eq(' + args.currentSlideNumber + ')').addClass('selected');
-		
 	}
 	
 	function slideContentComplete(args) {
@@ -89,23 +87,28 @@ $(document).ready(function($){
 	}
 	
 	function slideContentLoaded(args) {
-		
-		/* indicator */
 		$('.iosSliderButtons .button').removeClass('selected');
 		$('.iosSliderButtons .button:eq(' + args.currentSlideNumber + ')').addClass('selected');
-		
 	}
 	
 	/* Drop our retina detection script */
 	$.highdpi_init();
+	
+	// Lets make the little fella on the front breathe
+	$(".head").queue(
+		function(next) {
+	    	$(this).delay(500).animate({"top":"+=6px"},1000).delay(2000).animate({"top":"-=6px"},1000);
+	    	$(".torso").delay(700).animate({"top":"+=4px"},1000).delay(1800).animate({"top":"-=4px"},1000);
+	    	$(this).queue(arguments.callee);
+	    	next();
+		}	
+	);
 	
 	/* SLider fix */
 	$(".iosSlider").css("height","500px");
 	
 	//Add a listener to check the size of the document when you load
 	$(document).resize(checkSize);
-	
-	//Check the size now.
 	checkSize();
 	
 });
