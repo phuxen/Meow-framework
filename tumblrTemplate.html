@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="animated fadeIn" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Huxen</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		
+		<!--
+		CSS
+		-->
+		<link href="http://www.paulhuxen.co.uk/meow/web_assets/css/meow.css" rel="stylesheet">
+		
+		<!--
+		JAVASCRIPT
+		-->
+		<script src="http://www.paulhuxen.co.uk/meow/web_assets/js/jquery.js"></script>
+		<script src="http://www.paulhuxen.co.uk/meow/web_assets/js/jquery.iosslider.js"></script>
+		<script src="http://www.paulhuxen.co.uk/meow/web_assets/js/meow.js"></script>
+		
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Syntax highlighter -->
+		<script type="text/javascript" src="http://www.paulhuxen.co.uk/meow/web_assets/syntax/shCore.js"></script>
+		<script type="text/javascript" src="http://www.paulhuxen.co.uk/meow/web_assets/syntax/shBrushCss.js"></script>
+		<!-- Include *at least* the core style and default theme -->
+		<link href="http://www.paulhuxen.co.uk/meow/web_assets/syntax/shCore.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript">
+		     SyntaxHighlighter.all()
+		</script>		
+		
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="http://www.paulhuxen.co.uk/meow/web_assets/ico/favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.paulhuxen.co.uk/meow/web_assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.paulhuxen.co.uk/meow/web_assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.paulhuxen.co.uk/meow/web_assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="http://www.paulhuxen.co.uk/meow/web_assets/ico/apple-touch-icon-57-precomposed.png">
+		
+	</head>
+	<body>
+	    
+	    <div class="navbar">
+			<div class="navbarInner">
+				<h1 class="brand" href="index.html">Paul<strong>Huxen</strong></h1>
+			</div>
+	    </div>
+		
+		<div class="wrapper">
+		    <div class="container">
+				
+				<div class="articleWrap">
+		    	<h1>{Title}</h1>
+
+		        {block:Description}
+		            <p id="description">{Description}</p>
+		        {/block:Description}
+		
+		        <ol id="posts">
+		            {block:Posts}
+		                {block:Text}
+		                    <li class="post text">
+		                        {block:Title}
+		                            <h3><a href="{Permalink}">{Title}</a></h3>
+		                        {/block:Title}
+		
+		                        {Body}
+		                    </li>
+		                {/block:Text}
+		
+		                {block:Photo}
+		                    <li class="post photo">
+		                        <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+		
+		                        {block:Caption}
+		                            <div class="caption">{Caption}</div>
+		                        {/block:Caption}
+		                    </li>
+		                {/block:Photo}
+		
+		                {block:Panorama}
+		                    <li class="post panorama">
+		                        {LinkOpenTag}
+		                            <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+		                        {LinkCloseTag}
+		
+		                        {block:Caption}
+		                            <div class="caption">{Caption}</div>
+		                        {/block:Caption}
+		                    </li>
+		                {/block:Panorama}
+		
+		                {block:Photoset}
+		                    <li class="post photoset">
+		                        {Photoset-500}
+		
+		                        {block:Caption}
+		                            <div class="caption">{Caption}</div>
+		                        {/block:Caption}
+		                    </li>
+		                {/block:Photoset}
+		
+		                {block:Quote}
+		                    <li class="post quote">
+		                        "{Quote}"
+		
+		                        {block:Source}
+		                            <div class="source">{Source}</div>
+		                        {/block:Source}
+		                    </li>
+		                {/block:Quote}
+		
+		                {block:Link}
+		                    <li class="post link">
+		                        <a href="{URL}" class="link" {Target}>{Name}</a>
+		
+		                        {block:Description}
+		                            <div class="description">{Description}</div>
+		                        {/block:Description}
+		                    </li>
+		                {/block:Link}
+		
+		                {block:Chat}
+		                    <li class="post chat">
+		                        {block:Title}
+		                            <h3><a href="{Permalink}">{Title}</a></h3>
+		                        {/block:Title}
+		
+		                        <ul class="chat">
+		                            {block:Lines}
+		                                <li class="{Alt} user_{UserNumber}">
+		                                    {block:Label}
+		                                        <span class="label">{Label}</span>
+		                                    {/block:Label}
+		
+		                                    {Line}
+		                                </li>
+		                            {/block:Lines}
+		                        </ul>
+		                    </li>
+		                {/block:Chat}
+		
+		                {block:Video}
+		                    <li class="post video">
+		                        {Video-500}
+		
+		                        {block:Caption}
+		                            <div class="caption">{Caption}</div>
+		                        {/block:Caption}
+		                    </li>
+		                {/block:Video}
+		
+		                {block:Audio}
+		                    <li class="post audio">
+		                        {AudioPlayerBlack}
+		
+		                        {block:Caption}
+		                            <div class="caption">{Caption}</div>
+		                        {/block:Caption}
+		                    </li>
+		                {/block:Audio}
+		            {/block:Posts}
+		        </ol>
+		
+		        <p id="footer">
+		            {block:PreviousPage}
+		                <a href="{PreviousPage}">&#171; Previous</a>
+		            {/block:PreviousPage}
+		
+		            {block:NextPage}
+		                <a href="{NextPage}">Next &#187;</a>
+		            {/block:NextPage}
+		
+		            <a href="/archive">Archive</a>
+		        </p>
+		        </div>						
+				
+				
+				<div id="footerWrapper">
+					<div id="footerWrapperInner">
+						<ul>
+							<li>&copy; 2013 Paul Huxen</li>
+							<li><a title="Compare our music tastes on Last.fm" href="http://www.last.fm/user/twiggy8520" target="_blank">Last.fm</a></li>
+							<li><a title="Visit my LinkedIn profile" href="http://www.linkedin.com/in/paulhuxen" target="_blank">LinkedIn</a></li>
+							<li><a title="Stalk me on Foursquare" href="http://foursquare.com/phuxen" target="_blank">Foursquare</a></li>
+							<li><a title="Listen to my music on Soundcloud" href="http://www.soundcloud.com/gillsanseric" target="_blank">Soundcloud</a></li>
+							<li><a title="tweet @phuxen on twitter" href="http://www.twitter.com/phuxen" target="_blank">Twitter</a></li>
+							<li><a title="Watch my videos on Vimeo" href="http://www.vimeo.com/phuxen" target="_blank">Vimeo</a></li>
+						</ul>
+					</div>
+				</div>
+		    	
+		    </div><!--Container-->
+		</div><!--Wrapper-->
+	
+	</body>
+</html>

@@ -42,7 +42,7 @@ NAVIGATION
 							position:fixed;width:100%;
 							z-index:10;
 							text-align:center;
-							padding:8px 0;
+							padding:12px 0;
 							box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
 							-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
 							-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
@@ -51,19 +51,28 @@ NAVIGATION
 	.navbarInner		{
 							width:@siteWidthFull;
 							margin:0 auto;
+							position:relative;
 						}
-		.navbarInner a.brand			{color:@white;font-size:20px;}
-		.navbarInner a.brand:hover		{text-decoration:none;}
+		.navbarInner h1.brand			{
+											color:@white;
+											font-family: "GandhiSansRegular", Helvetica, Arial, "Lucida Grande", sans-serif; 
+											font-size:@bodyFontSize + 5;
+											font-weight:normal;
+											text-shadow: 0 -1px 0 (@themeColorDark - 40%);
+											text-transform:none;
+											margin-bottom:0;
+										}
 		
-		ul.nav			{float: left;}
-		ul.nav li		{float: left;padding:12px 10px 0;}
-		ul.nav li a		{color: @grayLight;}
+		ul.nav			{float:right;position:absolute;top:-7px;right:0;}
+		ul.nav li		{float:left;padding:0 0 0 20px;}
+		ul.nav li a		{color:@grayLight;}
 			ul.nav li a.active		{color: @white;}
 		
 		.navbarInner a.title		{color:@grayLight;padding:12px 10px;display:inline-block;}
 			.navbarInner a:hover	{text-decoration:none;color:@white;}
 			
-		.navbarInner a.pictos		{font-size:1.5em;color:@grayLighter;line-height:0.9;}			
+		.navbarInner a.pictos		{font-size:1.5em;line-height:0.9;}			
+			
 /* =========================================================================================
 
 MAIN ELEMENTS
@@ -71,17 +80,14 @@ MAIN ELEMENTS
 ========================================================================================= */			
 .wrapper				{
 							//width:100%;z-index:10;padding:380px 0 30px;position:relative;
-							width:100%;padding:52px 0 0;
+							width:100%;padding:50px 0 0;float:left;
 						}
 	.container			{
 							
 						}
-		.logo			{
-							background:url(../img/mainLogo.png) no-repeat top center transparent;
-							height:400px;width:100%;
-						}
 		.sliderWrap		{
-							width:100%;height:400px;
+							width:100%;
+							height:400px;
 							background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
 							overflow:hidden;
 						}
@@ -94,6 +100,30 @@ MAIN ELEMENTS
 				.itemPurchaseInfo			{
 												width:(@siteWidthFull/100)*30;float:left;
 											}
+		
+		.aboutMe		{
+							width:100%;
+							background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
+							overflow:hidden;
+						}
+			.aboutMeInner	{
+								width:@siteWidthFull;margin:0 auto;padding:40px 20px;clear:both;
+							}									
+				.aboutCopy	{
+								width:(@siteWidthFull/100)*60;float:left;padding:0 0 20px 40px;
+							}
+					.aboutCopy h3	{
+										color:@grayLighter;
+									}
+					.aboutCopy p	{
+										color:@gray;
+									}
+				.aboutPhoto	{
+								width:(@siteWidthFull/100)*30;float:left;text-align:center;margin:20px 0 40px;
+							}
+					.aboutPhoto img {
+										margin:0 auto 20px;display:block;
+									}
 .code .toolbar {display:none;}
 
 /* =========================================================================================
@@ -102,14 +132,14 @@ FOOTER
 
 ========================================================================================= */
 #footerWrapper			{
-							width:100%;float:left;
+							width:100%;
 						}
 	#footerWrapperInner	{
-							width:@siteWidthFull;margin:0 auto 20px;padding:20px;
+							width:@siteWidthFull;margin:0 auto;padding:20px;
 						}
 	#footerWrapper ul 	{
 							list-style: none;
-							margin: 20px 0 0;
+							padding: 20px 0;
 							float:left;
 							width:100%;
 						}
@@ -123,7 +153,8 @@ FOOTER
 											border-left: 0 none;
 											padding-left: 0;
 										}
-						}	
+						}
+	
 
 /* =========================================================================================
 
@@ -304,6 +335,12 @@ BUTTONS
 	}
 	&:focus {
 		//outline: 1px dotted #666;
+	}
+	&.flat {
+		border-width:0;
+		padding:6px 10px;
+		text-transform:none;
+		font-weight:normal;
 	}
 	&.large {
 		padding:10px 20px;
@@ -594,8 +631,6 @@ MOBILE & TABLETS
 		.huxenDisclaimer		{display:none;}
 	
 	.articleCopy				{width:100%;padding-right:0;}
-		.sliderWrap,
-			.iosSlider 				{height:300px;}
 		
 		.slide 	{
 			width:100px
