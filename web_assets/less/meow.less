@@ -31,6 +31,20 @@ body	{
 		-webkit-animation-delay: 1s;
 		-webkit-animation-iteration-count: 1;
 	}
+
+/* =========================================================================================
+
+ERRORS
+
+========================================================================================= */
+body.error {
+		background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
+		color:@gray;
+	}
+	.error h1, .error h2, .error h3, .error h4, .error h5	{
+				color:@grayLighter;
+			}
+
 /* =========================================================================================
 
 NAVIGATION
@@ -430,11 +444,9 @@ IOS SLIDER
 		height: 100%;
 	}
 		.slide {
-			background:url(../img/backgrounds/lightpaperfibers.png) top center repeat @white;
 			float: left;
-			//margin:0 20px 0 0;
-			width:900px;
-			height: 500px;
+			width:400px;
+			height:400px;
 			.transition(.2s linear all);
 			overflow:hidden;
 			&:hover {
@@ -444,10 +456,10 @@ IOS SLIDER
 				margin:0;
 			}
 			&.slideLTKD {
-				width:400px;
+				//width:420px;
 			}
 			&.slideSociety6 {
-				width:400px;
+				//width:420px;
 			}
 		}
 
@@ -474,19 +486,6 @@ IOS SLIDER
 	z-index: 2;
 	font-size:2.2em;
 }
-	.sliderWrap.WorkHeader {
-		height:auto;
-	}
-		.sliderWrap.WorkHeader img {margin:0 auto;display:block;max-width:100%;}
-	
-	.sliderWrap.aboutMeHeader {
-		height:auto;
-	}
-		.aboutMeHeaderInner					{width:@siteWidthFull;padding:30px 20px 20px;text-align:center;margin:0 auto;}
-			.sliderWrap.aboutMeHeader img 	{margin:0 auto 20px;display:block;max-width:100%;}
-			.sliderWrap.aboutMeHeader h1	{color:@white;margin:0;}
-			.sliderWrap.aboutMeHeader h2	{color:@white;margin:0;}
-			.sliderWrap.aboutMeHeader p		{color:@grayLight;}
 /* =========================================================================================
 
 SYNTAX HIGHLIGHT
@@ -594,7 +593,24 @@ SYNTAX HIGHLIGHT
   color: #ffaa3e !important;
 }
 		
+/* =========================================================================================
 
+
+BLOG
+
+
+========================================================================================= */
+.post {
+	margin:20px 0;
+	border-color:#000;
+	border-style:solid;
+	border-width:0 0 1px;
+}
+	.post img {
+		margin: 0 auto;
+		display: block;
+		max-width: 100%;
+	}
 
 
 /* =========================================================================================
@@ -608,10 +624,7 @@ MOBILE & TABLETS
 @media screen and (min-device-width: 720px) and (max-width: 1024px) {
 	/* For general iPad layouts */
 	body					{font-size:1.1em;}
-	
-	.iosSlider 				{height:500px;}
-		.slide 				{width:718px}
-	
+		
 	.btn		{
 		padding:12px 15px;
 	}
@@ -625,22 +638,51 @@ MOBILE & TABLETS
 	.articleWrap,
 	#footerWrapperInner,
 	.itemPurchaseInfo,
+	.aboutMe,
+	.aboutPhoto,
 	.huxenIntro,
-	.aboutMeHeaderInner			{width:100%;}
+	.aboutMeInner				{width:100%;}
 		.huxenWrapper,
 		.huxenDisclaimer		{display:none;}
 	
+	.aboutCopy					{width:100%;padding-left:0;}
 	.articleCopy				{width:100%;padding-right:0;}
-		
-		.slide 	{
-			width:100px
-			&.slideLTKD {
-				width:130px;
+	
+	/* ===================================================================================
+	SLIDER
+	=================================================================================== */
+	.sliderWrap {
+		height:300px;
+	}
+		.slide {
+			width:300px;
+			height:300px;
+			&:hover {
+				
 			}
-			&.slideFullWidth {
-				width:100%;
+			&.last {
+				margin:0;
+			}
+			&.slideLTKD {
+				//width:420px;
+			}
+			&.slideSociety6 {
+				//width:420px;
+			}
+			& img {
+				width:300px;
+				height:auto;
 			}
 		}
-	.btn 						{width:100%;}
+	
+	/* ===================================================================================
+	BUTTON
+	=================================================================================== */	
+	.btn {
+		width:100%;padding:16px 15px;
+		&.flat {
+			width:auto;
+		}
+	}
 	.btnGroup .btn 				{width:auto;}
 }
