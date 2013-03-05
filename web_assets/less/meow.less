@@ -1,6 +1,6 @@
 @import "reset.less";
 @import "var.less";
-@import "../fonts/stylesheet.css";
+@import "../fonts/Gandhi/stylesheet.css";
 
 /* =========================================================================================
 
@@ -16,7 +16,7 @@ body	{
 	font-size:@bodyFontSize;
 	font-family: "GandhiSansRegular", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	font-weight: 300;
-	line-height:1.7;
+	line-height:1.6;
 	background:url(../img/backgrounds/lightpaperfibers.png) top center repeat @white;
 }
 	#menu {
@@ -37,14 +37,28 @@ body	{
 ERRORS
 
 ========================================================================================= */
-body.error {
+body.dark {
 		background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
 		color:@gray;
 	}
-	.error h1, .error h2, .error h3, .error h4, .error h5	{
+	.dark h1, .dark h2, .dark h3, .dark h4, .dark h5	{
 				color:@grayLighter;
 			}
 
+/* =========================================================================================
+
+Plain
+
+========================================================================================= */
+body.plain {
+		//background:#fff;
+		color:#444;
+	}
+	.plain h1, .plain h2, .plain h3, .plain h4, .plain h5, .plain p,
+	.plain .aboutCopy h1, .plain .aboutCopy h2, .plain .aboutCopy h3, .plain .aboutCopy h4, .plain .aboutCopy h5, .plain .aboutCopy p {
+			color:#444;
+		}
+	body.plain .aboutMe {background:none;}
 /* =========================================================================================
 
 NAVIGATION
@@ -121,7 +135,7 @@ MAIN ELEMENTS
 							overflow:hidden;
 						}
 			.aboutMeInner	{
-								width:@siteWidthFull;margin:0 auto;padding:40px 20px;clear:both;
+								width:@siteWidthFull;margin:0 auto;padding:20px 20px 40px;clear:both;
 							}									
 				.aboutCopy	{
 								width:(@siteWidthFull/100)*60;float:left;padding:0 0 20px 40px;
@@ -136,7 +150,7 @@ MAIN ELEMENTS
 								width:(@siteWidthFull/100)*30;float:left;text-align:center;margin:20px 0 40px;
 							}
 					.aboutPhoto img {
-										margin:0 auto 20px;display:block;
+										margin:0 auto 20px;display:block;.roundCorners(500px);
 									}
 .code .toolbar {display:none;}
 
@@ -149,7 +163,7 @@ FOOTER
 							width:100%;
 						}
 	#footerWrapperInner	{
-							width:@siteWidthFull;margin:0 auto;padding:20px;
+							width:@siteWidthFull;margin:0 auto;padding:0 20px
 						}
 	#footerWrapper ul 	{
 							list-style: none;
@@ -246,11 +260,15 @@ TYPOGRAPHY
 /* -------------------------------------------------------
 Headers
 ------------------------------------------------------- */
-h1, h2, h3, h4, h5		{font-weight:normal;text-transform:uppercase;letter-spacing:2px;}
+h1, h2, h3, h4, h5		{
+	font-weight:normal;
+	//text-transform:uppercase;
+	//letter-spacing:2px;
+}
 h1{
 	font-family: "GandhiSansBold", Helvetica, Arial, "Lucida Grande", sans-serif;
 	color:@headerColor;
-	font-size:@bodyFontSize + 20;
+	font-size:@bodyFontSize + 30;
 	line-height:1.2;
 	margin-bottom:15px;
 	&.homeHeader {
@@ -265,7 +283,7 @@ h1{
 h2{
 	font-family: "GandhiSansBold", Helvetica, Arial, "Lucida Grande", sans-serif;
 	color:@headerColor;
-	font-size:@bodyFontSize + 12;
+	font-size:@bodyFontSize + 18;
 	line-height:1.2;
 	margin-bottom:15px;
 	& em {
@@ -277,7 +295,7 @@ h2{
 h3{
 	font-family: "GandhiSansBold", Helvetica, Arial, "Lucida Grande", sans-serif;
 	color:@headerColor;
-	font-size:@bodyFontSize + 8;
+	font-size:@bodyFontSize + 12;
 	line-height:1.2;
 	margin-bottom:15px;
 	& em {
@@ -323,11 +341,11 @@ BUTTONS
 	padding:10px 13px;
 	/* Border colour variable is found in var.less - .gradientBar */
 	border-style: solid;
-	border-width: 2px;
+	border-width: 0 0 2px;
 	color:@grayDark;
 	font-weight:normal;
 	font-size:@bodyFontSize;
-	font-weight:bold;
+	//font-weight:bold;
 	line-height:14px;
 	.transition(.1s linear all);
 	.gradientBar(@grayLighter, @grayLight);
@@ -352,8 +370,8 @@ BUTTONS
 		//outline: 1px dotted #666;
 	}
 	&.flat {
-		border-width:1px;
-		padding:6px 10px;
+		//border-width:1px;
+		padding:6px 10px 7px;
 		text-transform:none;
 		font-weight:normal;
 	}
@@ -624,11 +642,23 @@ MOBILE & TABLETS
 
 @media screen and (min-device-width: 720px) and (max-width: 1024px) {
 	/* For general iPad layouts */
-	body					{font-size:1.1em;}
-		
-	.btn		{
-		padding:12px 15px;
-	}
+	body		{font-size:1.1em;}
+	
+	.navbarInner,
+	.articleWrap,
+	#footerWrapperInner,
+	.itemPurchaseInfo,
+	.aboutPhoto,
+	.huxenIntro,
+	.aboutMeInner				{width:@siteWidthMid;}
+	
+	//.aboutCopy				{width:100%;padding-left:0;}
+	//.articleCopy				{width:100%;padding-right:0;}
+	
+	.aboutCopy,
+	.articleCopy				{width:(@siteWidthMid/100)*60;}
+	.aboutPhoto,
+	.itemPurchaseInfo			{width:(@siteWidthMid/100)*30;}
 }
 
 @media screen and (max-width: 719px) {
