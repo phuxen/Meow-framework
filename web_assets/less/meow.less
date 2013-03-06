@@ -14,7 +14,7 @@ body	{
 	
 	color:@bodyColor;
 	font-size:@bodyFontSize;
-	font-family: "GandhiSansRegular", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-family:@bodyFamily; 
 	font-weight: 300;
 	line-height:1.6;
 	background:url(../img/backgrounds/lightpaperfibers.png) top center repeat @white;
@@ -444,7 +444,63 @@ BUTTONS
 		.btnGroup .btn.active {
 			
 		}
+/* =========================================================================================
 
+QUOTE
+
+========================================================================================= */
+.blockquoteWrapper {
+	width:100%;
+	float:left;
+}
+blockquote {
+	//color:@grayLight;
+	font-family: Georgia, serif;
+	font-size: @bodyFontSize;
+	font-style: italic;
+	//width: 500px;
+	margin: 0.25em 0;
+	padding: 0 30px 0 40px;
+	//line-height: 1.45;
+	position: relative;
+	//color: #383838;
+}
+	bloackquote p {
+		
+	}
+blockquote:before {
+	display: block;
+	content: "\201C";
+	font-size: 80px;
+	position: absolute;
+	left: -10px;
+	top: -20px;
+	color: #7a7a7a;
+}
+blockquote:after {
+	display: block;
+	content: "\201D";
+	font-size: 80px;
+	position: absolute;
+	right: 0;
+	bottom: -10px;
+	color: #7a7a7a;
+}
+blockquote cite {
+	//color: #999999;
+	font-family:@bodyFamily;
+	font-size: @bodyFontSize;
+	display: block;
+	margin-top: 5px;
+	//border-top:@grayLight 1px solid;
+	//padding:20px 0 0;
+	margin:20px 0 0;
+	text-align:right;
+}
+ 
+blockquote cite:before {
+	//content: "\2014 \2009";
+}
 /* =========================================================================================
 
 IOS SLIDER
