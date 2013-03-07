@@ -27,10 +27,10 @@
 @yellow:            #ffc40d;
 @orange:            #f89406;
 @pink:              #c3325f;
-@pinkDark:          lighten(@pink, 12%);
+@pinkLight:          lighten(@pink, 12%);
 @purple:            #7a43b6;
 
-	@themeColor:		@pinkDark; //3a547b
+	@themeColor:		@pinkLight; //3a547b
 	@themeColorDark:	lighten(@themeColor, -10%);
 	
 	@backgroundColor:	lighten(@themeColor, 50%);
@@ -40,8 +40,8 @@
 /* -----------------------------------------------------------------------------------------
 	Typography
 ----------------------------------------------------------------------------------------- */
-@headerColor:		#00142a; /*29343f*/
-@bodyColor:			#3a546f;
+@headerColor:		@grayLighter;/*#00142a; 29343f*/
+@bodyColor:			@gray;/*#3a546f;*/
 
 // Links
 @linkColor:         @themeColor;
@@ -51,7 +51,7 @@
 @bodyFamily:		"GandhiSansRegular", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	
 	// Navigation
-	@navGradTop:		@themeColor;
+	@navGradTop:		@themeColor; /*lighten(#3a546f, -15%);*/
 	@navGradBot:		lighten(@navGradTop, -10%);
 	@navGradHover:   	lighten(@navGradTop, -20%);    
 	
@@ -114,7 +114,7 @@ Useful classes
   #gradient > .vertical(@primaryColor, @secondaryColor);
   /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
   /* This adjusts the colour of our buttons */
-  border-color: darken(@secondaryColor, 10%);
+  border-color: darken(@secondaryColor, 20%);
   /*box-sizing: content-box;*/
 }
 .noSelect {

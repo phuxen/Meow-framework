@@ -59,10 +59,10 @@ $(document).ready(function($){
 	
 	// SLIDER AND SHIZ
 	$('.iosSlider').iosSlider({		
-		scrollbar: true,
-		snapToChildren: false,
+		scrollbar: false,
+		snapToChildren: true,
 		desktopClickDrag: true,
-		scrollbarLocation: 'top',
+		scrollbarLocation: 'bottom',
 		scrollbarMargin: '5px 10px 0 10px',
 		scrollbarBorderRadius: 4,
 		scrollbarHeight: '5px',
@@ -71,6 +71,7 @@ $(document).ready(function($){
 		navPrevSelector: $('.prevButton'),
 		navSlideSelector: $('.iosSliderButtons .button'),
 		infiniteSlider: false,
+		keyboardControls: true,
 		onSlideChange: slideContentChange,
 		onSlideComplete: slideContentComplete,
 		onSliderLoaded: slideContentLoaded,
@@ -105,7 +106,7 @@ $(document).ready(function($){
 	);
 	
 	/* SLider fix */
-	$(".iosSlider").css("height","500px");
+	//$(".iosSlider").css("height","500px");
 	
 	/* 
 	addEventListener("load", function() 

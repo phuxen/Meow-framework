@@ -1,5 +1,8 @@
 @import "reset.less";
 @import "var.less";
+@import "syntax.less";
+@import "typography.less";
+@import "iosslider.less";
 @import "../fonts/Gandhi/stylesheet.css";
 
 /* =========================================================================================
@@ -11,54 +14,19 @@ html	{
 	
 }
 body	{
-	
 	color:@bodyColor;
 	font-size:@bodyFontSize;
 	font-family:@bodyFamily; 
 	font-weight: 300;
 	line-height:1.6;
-	background:url(../img/backgrounds/lightpaperfibers.png) top center repeat @white;
+	background:url(../img/backgrounds/noisy_net.png) top center repeat @white;
 }
-	#menu {
-		background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
-	}
-	#home {
-		
-	}
 	
 	body.home {
 		-webkit-animation-duration: 2s;
 		-webkit-animation-delay: 1s;
 		-webkit-animation-iteration-count: 1;
 	}
-
-/* =========================================================================================
-
-ERRORS
-
-========================================================================================= */
-body.dark {
-		background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
-		color:@gray;
-	}
-	.dark h1, .dark h2, .dark h3, .dark h4, .dark h5	{
-				color:@grayLighter;
-			}
-
-/* =========================================================================================
-
-Plain
-
-========================================================================================= */
-body.plain {
-		//background:#fff;
-		color:#444;
-	}
-	.plain h1, .plain h2, .plain h3, .plain h4, .plain h5, .plain p,
-	.plain .aboutCopy h1, .plain .aboutCopy h2, .plain .aboutCopy h3, .plain .aboutCopy h4, .plain .aboutCopy h5, .plain .aboutCopy p {
-			color:#444;
-		}
-	body.plain .aboutMe {background:none;}
 /* =========================================================================================
 
 NAVIGATION
@@ -75,6 +43,13 @@ NAVIGATION
 							-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
 							-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
 							//display:none;
+							&.alt {
+								border-bottom:none;
+								box-shadow:none;
+								-moz-box-shadow:none;
+								-webkit-box-shadow:none;
+								background:none;
+							}
 						}
 	.navbarInner		{
 							width:@siteWidthFull;
@@ -86,20 +61,10 @@ NAVIGATION
 											font-family: "GandhiSansRegular", Helvetica, Arial, "Lucida Grande", sans-serif; 
 											font-size:@bodyFontSize + 5;
 											font-weight:normal;
-											text-shadow: 0 -1px 0 (@themeColorDark - 40%);
+											text-shadow: 0 -1px 0 (@navGradTop - 40%);
 											text-transform:none;
 											margin-bottom:0;
-										}
-		
-		ul.nav			{}
-		ul.nav li		{float:left;padding:6px 15px 0;}
-		ul.nav li a		{color:@grayLight;}
-			ul.nav li a.active		{color: @white;}
-		
-		.navbarInner a.title		{color:@grayLight;padding:12px 10px;display:inline-block;}
-			.navbarInner a:hover	{text-decoration:none;color:@white;}
-			
-		.navbarInner a.pictos		{font-size:1.5em;line-height:0.9;}			
+										}			
 			
 /* =========================================================================================
 
@@ -108,31 +73,37 @@ MAIN ELEMENTS
 ========================================================================================= */			
 .wrapper				{
 							//width:100%;z-index:10;padding:380px 0 30px;position:relative;
-							width:100%;padding:50px 0 0;float:left;
+							width:100%;padding:0 0 0;float:left;
 						}
 	.container			{
 							
 						}
-		.sliderWrap		{
-							width:100%;
-							height:400px;
-							background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
-							overflow:hidden;
+		#work			{
+							position:relative;
+							height:100%;
 						}
-		.articleWrap	{
-							width:@siteWidthFull;margin:0 auto;padding:5px 20px 20px;clear:both;
-						}
-				.articleCopy				{
-												width:(@siteWidthFull/100)*60;float:left;padding:0 40px 20px 0;
-											}
-				.itemPurchaseInfo			{
-												width:(@siteWidthFull/100)*30;float:left;
-											}
-		
+			.sliderWrap		{
+								//width:100%;
+								//height:400px;
+								background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
+								overflow:hidden;
+							}
+			.articleWrap	{
+								width:@siteWidthFull;margin:0 auto;padding:5px 20px 20px;clear:both;
+							}
+					.articleCopy				{
+													width:(@siteWidthFull/100)*60;float:left;padding:0 40px 20px 0;
+												}
+					.itemPurchaseInfo			{
+													width:(@siteWidthFull/100)*30;float:left;
+												}
+			
+		/* INTRODUCTION ON THE WEBSITE */
 		.aboutMe		{
 							width:100%;
 							background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
 							overflow:hidden;
+							margin:20px 0 0;
 						}
 			.aboutMeInner	{
 								width:@siteWidthFull;margin:0 auto;padding:20px 20px 40px;clear:both;
@@ -140,20 +111,12 @@ MAIN ELEMENTS
 				.aboutCopy	{
 								width:(@siteWidthFull/100)*60;float:left;padding:0 0 20px 40px;
 							}
-					.aboutCopy h3	{
-										color:@grayLighter;
-									}
-					.aboutCopy p	{
-										color:@gray;
-									}
 				.aboutPhoto	{
 								width:(@siteWidthFull/100)*30;float:left;text-align:center;margin:20px 0 40px;
 							}
 					.aboutPhoto img {
 										margin:0 auto 20px;display:block;.roundCorners(500px);
 									}
-.code .toolbar {display:none;}
-
 /* =========================================================================================
 
 FOOTER
@@ -241,93 +204,6 @@ About me section
 	.cvSec h3 		{
 						margin-bottom:0;
 					}
-/* =========================================================================================
-
-TYPOGRAPHY
-
-========================================================================================= */
-
-@font-face {
-	font-family: 'Pictos';
-	src: url('../icons/pictos-web.eot');
-	src: local('☺'), url('../icons/pictos-web.woff') format('woff'),url('../icons/pictos-web.ttf') format('truetype'), url('../icons/pictos-web.svg#webfontphKv1xv9') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-	.pictos {font-family:"Pictos";font-weight:normal;line-height:0;text-shadow:none;}
-
-
-/* -------------------------------------------------------
-Headers
-------------------------------------------------------- */
-h1, h2, h3, h4, h5		{
-	font-weight:normal;
-	//text-transform:uppercase;
-	//letter-spacing:2px;
-}
-h1{
-	font-family: "GandhiSansBold", Helvetica, Arial, "Lucida Grande", sans-serif;
-	color:@headerColor;
-	font-size:@bodyFontSize + 30;
-	line-height:1.2;
-	margin-bottom:15px;
-	&.homeHeader {
-		font-size: 3em;
-		text-align:center;
-	}
-	& em {
-		text-transform:none;
-		color:@bodyColor;
-	}
-}
-h2{
-	font-family: "GandhiSansBold", Helvetica, Arial, "Lucida Grande", sans-serif;
-	color:@headerColor;
-	font-size:@bodyFontSize + 18;
-	line-height:1.2;
-	margin-bottom:15px;
-	& em {
-		font-family: "GandhiSansBoldItalic", Helvetica, Arial, "Lucida Grande", sans-serif;
-		text-transform:none;
-		color:@bodyColor;
-	}
-}
-h3{
-	font-family: "GandhiSansBold", Helvetica, Arial, "Lucida Grande", sans-serif;
-	color:@headerColor;
-	font-size:@bodyFontSize + 12;
-	line-height:1.2;
-	margin-bottom:15px;
-	& em {
-		text-transform:none;
-		color:@bodyColor;
-	}
-}
-h4{
-	font-family: "GandhiSansBold", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-size:@bodyFontSize + 4;
-	line-height:1.2;
-	margin-bottom:10px;
-	& em {
-		text-transform:none;
-		color:@bodyColor;
-	}
-}
-
-p,address	{margin-bottom:15px;font-size:1em;}
-p+p			{text-indent:30px;}
-
-em			{font-style:italic;font-weight:normal;font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;}
-strong		{font-weight:normal;font-family: "GandhiSansBold", Helvetica, Arial, "Lucida Grande", sans-serif;}
-
-a						{color:@linkColor;text-decoration:none;}
-a:hover					{color:@linkColorHover;text-decoration:underline;}
-
-.superscript			{vertical-align:super;font-size:70%;} 
-.subscript				{vertical-align:bottom;font-size:70%;} 
-
-::selection 			{background:@themeColor;color:@white;}
-::-moz-selection		{background:@themeColor;color:@white;}
 
 /* =========================================================================================
 
@@ -374,6 +250,9 @@ BUTTONS
 		padding:6px 10px 7px;
 		text-transform:none;
 		font-weight:normal;
+	}
+	&.half {
+		width:70%;
 	}
 	&.large {
 		padding:10px 20px;
@@ -446,6 +325,107 @@ BUTTONS
 		}
 /* =========================================================================================
 
+SLIDER
+
+========================================================================================= */
+.sliderContainer {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.iosSlider {
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+	.iosSlider .slider {
+		width: 100%;
+		height: 100%;
+	}
+	
+		.iosSlider .slider .item {
+			float: left;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: 50% 50%;
+			position:relative;
+		}
+
+/*
+Main slides	
+*/
+
+.iosSlider .slider .item1 {
+	background-image: url(../img/backgrounds/6.jpg);
+}
+.iosSlider .slider .item2 {
+	background-image: url(../img/backgrounds/2.jpg);
+}
+.iosSlider .slider .item3 {
+	background-image: url(../img/backgrounds/9.jpg);
+}
+.iosSlider .slider .item4 {
+	background-image: url(../img/backgrounds/4.jpg);
+}
+
+.iosSlider .slider .item .captionWrapper {
+	color:@white;
+	width:@siteWidthFull;
+	height:100%;
+	margin:0 auto;
+	position:relative;
+	padding:0 20px;
+}
+	.iosSlider .slider .item .captionInner {
+		//background:rgba(0,0,0,0.3);
+		padding:20px 20px 10px;
+		width:50%;
+	}
+		.iosSlider .slider .item1 .captionInner {
+			position:absolute;
+			bottom:50px;
+			right:0;
+		}
+
+/* Buttons */
+.iosSliderButtons {
+	width:@siteWidthFull;
+	height: 10px;
+	//background:@black;
+	margin:0 auto;
+	padding:0 20px;
+	bottom:30px;
+	position:relative;
+}
+
+.iosSliderButtons .button {
+	float: left;
+	width: 15px;
+	height: 15px;
+	background: transparent;
+	border:2px solid @white;
+	margin: 0 10px 0 0;
+	opacity: 0.5;
+	.roundCorners(50px);
+	.transition(.1s linear all);
+}
+	.iosSliderButtons .button:hover {
+		opacity:0.75;
+	}
+.iosSliderButtons .selected {
+	background: @white;
+	opacity: 1;
+}
+/* =========================================================================================
+
 QUOTE
 
 ========================================================================================= */
@@ -475,7 +455,7 @@ blockquote:before {
 	position: absolute;
 	left: -10px;
 	top: -20px;
-	color: #7a7a7a;
+	color: @white;
 }
 blockquote:after {
 	display: block;
@@ -483,8 +463,8 @@ blockquote:after {
 	font-size: 80px;
 	position: absolute;
 	right: 0;
-	bottom: -10px;
-	color: #7a7a7a;
+	bottom: 10px;
+	color: @white;
 }
 blockquote cite {
 	//color: #999999;
@@ -500,174 +480,7 @@ blockquote cite {
  
 blockquote cite:before {
 	//content: "\2014 \2009";
-}
-/* =========================================================================================
-
-IOS SLIDER
-
-========================================================================================= */
-.iosSlider {
-	position: relative;
-	top: 0;
-	left: 0;
-	overflow: hidden;
-	width: 100%;
-	height: 500px;
-}
-	.slider {
-		width: 100%;
-		height: 100%;
-	}
-		.slide {
-			float: left;
-			width:400px;
-			height:400px;
-			.transition(.2s linear all);
-			overflow:hidden;
-			&:hover {
-				
-			}
-			&.last {
-				margin:0;
-			}
-			&.slideLTKD {
-				//width:420px;
-			}
-			&.slideSociety6 {
-				//width:420px;
-			}
-		}
-
-.iosSlider .prevButton {
-	.noSelect;
-	position: absolute;
-	top: 180px;
-	left: 20px;
-	width: 20px;
-	height: 40px;
-	//background: url(../img/slider-buttons.png) no-repeat 0 0;
-	z-index: 2;
-	font-size:2.2em;
-}
-
-.iosSlider .nextButton {
-	.noSelect;
-	position: absolute;
-	top: 180px;
-	right: 25px;
-	width: 20px;
-	height: 40px;
-	//background: url(../img/slider-buttons.png) no-repeat 100% 0;
-	z-index: 2;
-	font-size:2.2em;
-}
-/* =========================================================================================
-
-SYNTAX HIGHLIGHT
-
-========================================================================================= */
-.syntaxhighlighter {
-  background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
-  .roundCorners(5px);
-  padding:0;
-  border:2px solid lighten(@themeColor, -5%);
-}
-.syntaxhighlighter .line.alt1 {
-  //background-color: #0f192a !important;
-	//background: rgba(255, 255, 255, 0.05) !important;
-}
-.syntaxhighlighter .line.alt2 {
-  //background-color: #0f192a !important;
-}
-.syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
-  background-color: #253e5a !important;
-}
-.syntaxhighlighter .line.highlighted.number {
-  color: #38566f !important;
-}
-.syntaxhighlighter table caption {
-  color: #d1edff !important;
-}
-.syntaxhighlighter .gutter {
-  color: #afafaf !important;
-}
-.syntaxhighlighter .gutter .line {
-  border-right: 3px solid #435a5f !important;
-}
-.syntaxhighlighter .gutter .line.highlighted {
-  background-color: #435a5f !important;
-  color: #0f192a !important;
-}
-.syntaxhighlighter.printing .line .content {
-  border: none !important;
-}
-.syntaxhighlighter.collapsed {
-  overflow: visible !important;
-}
-.syntaxhighlighter.collapsed .toolbar {
-  color: #428bdd !important;
-  background: black !important;
-  border: 1px solid #435a5f !important;
-}
-.syntaxhighlighter.collapsed .toolbar a {
-  color: #428bdd !important;
-}
-.syntaxhighlighter.collapsed .toolbar a:hover {
-  color: #1dc116 !important;
-}
-.syntaxhighlighter .toolbar {
-  color: #d1edff !important;
-  background: #435a5f !important;
-  border: none !important;
-}
-.syntaxhighlighter .toolbar a {
-  color: #d1edff !important;
-}
-.syntaxhighlighter .toolbar a:hover {
-  color: #8aa6c1 !important;
-}
-.syntaxhighlighter .plain, .syntaxhighlighter .plain a {
-  color: #d1edff !important;
-}
-.syntaxhighlighter .comments, .syntaxhighlighter .comments a {
-  color: #428bdd !important;
-}
-.syntaxhighlighter .string, .syntaxhighlighter .string a {
-  color: #1dc116 !important;
-}
-.syntaxhighlighter .keyword {
-  color: #c43c35 !important;
-}
-.syntaxhighlighter .preprocessor {
-  color: #8aa6c1 !important;
-}
-.syntaxhighlighter .variable {
-  color: #ffaa3e !important;
-}
-.syntaxhighlighter .value {
-  color: #b6944a !important;
-}
-.syntaxhighlighter .functions {
-  color: #ffaa3e !important;
-}
-.syntaxhighlighter .constants {
-  color: #e0e8ff !important;
-}
-.syntaxhighlighter .script {
-  font-weight: bold !important;
-  color: #b43d3d !important;
-  background-color: none !important;
-}
-.syntaxhighlighter .color1, .syntaxhighlighter .color1 a {
-  color: #f8bb00 !important;
-}
-.syntaxhighlighter .color2, .syntaxhighlighter .color2 a {
-  color: white !important;
-}
-.syntaxhighlighter .color3, .syntaxhighlighter .color3 a {
-  color: #ffaa3e !important;
-}
-		
+}		
 /* =========================================================================================
 
 
@@ -706,7 +519,8 @@ MOBILE & TABLETS
 	.itemPurchaseInfo,
 	.aboutPhoto,
 	.huxenIntro,
-	.aboutMeInner				{width:@siteWidthMid;}
+	.aboutMeInner,
+	.iosSlider .slider .item .captionWrapper				{width:@siteWidthMid;}
 	
 	//.aboutCopy				{width:100%;padding-left:0;}
 	//.articleCopy				{width:100%;padding-right:0;}
@@ -728,7 +542,9 @@ MOBILE & TABLETS
 	.aboutMe,
 	.aboutPhoto,
 	.huxenIntro,
-	.aboutMeInner				{width:100%;}
+	.aboutMeInner,
+	.iosSlider .slider .item .captionWrapper,
+	.iosSlider .slider .item .captionInner				{width:100%;}
 		.huxenWrapper,
 		.huxenDisclaimer		{display:none;}
 	

@@ -1,0 +1,87 @@
+/* =========================================================================================
+
+TYPOGRAPHY
+
+========================================================================================= */
+
+@font-face {
+	font-family: 'Pictos';
+	src: url('../icons/pictos-web.eot');
+	src: local('☺'), url('../icons/pictos-web.woff') format('woff'),url('../icons/pictos-web.ttf') format('truetype'), url('../icons/pictos-web.svg#webfontphKv1xv9') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+	.pictos {font-family:"Pictos";font-weight:normal;line-height:0;text-shadow:none;}
+
+
+/* -------------------------------------------------------
+Headers
+------------------------------------------------------- */
+h1, h2, h3, h4, h5		{
+	font-weight:normal;
+	//text-transform:uppercase;
+	//letter-spacing:2px;
+}
+h1{
+	font-family: "GandhiSansBold", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color:@headerColor;
+	font-size:@bodyFontSize + 30;
+	line-height:1.2;
+	margin-bottom:15px;
+	&.homeHeader {
+		font-size: 3em;
+		text-align:center;
+	}
+	& em {
+		text-transform:none;
+		color:@bodyColor;
+	}
+}
+h2{
+	font-family: "GandhiSansBold", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color:@headerColor;
+	font-size:@bodyFontSize + 18;
+	line-height:1.2;
+	margin-bottom:15px;
+	& em {
+		font-family: "GandhiSansBoldItalic", Helvetica, Arial, "Lucida Grande", sans-serif;
+		text-transform:none;
+		color:@bodyColor;
+	}
+}
+h3{
+	font-family: "GandhiSansBold", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color:@headerColor;
+	font-size:@bodyFontSize + 12;
+	line-height:1.2;
+	margin-bottom:5px;
+	& em {
+		text-transform:none;
+		color:@bodyColor;
+	}
+}
+h4{
+	font-family: "GandhiSansBold", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size:@bodyFontSize + 4;
+	line-height:1.2;
+	margin-bottom:10px;
+	& em {
+		text-transform:none;
+		color:@bodyColor;
+	}
+}
+
+p,address	{margin-bottom:15px;font-size:1em;}
+p+p			{text-indent:30px;}
+
+em			{font-style:italic;font-weight:normal;font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;}
+strong		{font-weight:normal;font-family: "GandhiSansBold", Helvetica, Arial, "Lucida Grande", sans-serif;}
+
+a						{color:@linkColor;text-decoration:none;}
+a:hover					{color:@linkColorHover;text-decoration:underline;}
+
+.superscript			{vertical-align:super;font-size:70%;} 
+.subscript				{vertical-align:bottom;font-size:70%;} 
+
+::selection 			{background:@themeColor;color:@white;}
+::-moz-selection		{background:@themeColor;color:@white;}
