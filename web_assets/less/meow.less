@@ -37,7 +37,7 @@ NAVIGATION
 							border-bottom: 2px solid (lighten(@navGradBot, -20%));
 							position:fixed;width:100%;
 							z-index:10;
-							text-align:center;
+							text-align:left;
 							padding:12px 0;
 							box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
 							-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
@@ -49,6 +49,13 @@ NAVIGATION
 								-moz-box-shadow:none;
 								-webkit-box-shadow:none;
 								background:none;
+								position:absolute;
+								//top:0;
+								//left:0;
+								.brand {
+									font-size:@bodyFontSize + 10;
+									line-height:0.8;
+								}
 							}
 						}
 	.navbarInner		{
@@ -64,7 +71,20 @@ NAVIGATION
 											text-shadow: 0 -1px 0 (@navGradTop - 40%);
 											text-transform:none;
 											margin-bottom:0;
-										}			
+											display:block;
+											float:left;
+										}
+			ul.nav		{
+				list-style:none;
+				float:right;
+			}
+				ul.nav li {
+					float:left;
+					padding:0 10px 0 0;
+				}
+					ul.nav li a {
+						color: @white;
+					}		
 			
 /* =========================================================================================
 
@@ -73,7 +93,7 @@ MAIN ELEMENTS
 ========================================================================================= */			
 .wrapper				{
 							//width:100%;z-index:10;padding:380px 0 30px;position:relative;
-							width:100%;padding:0 0 0;float:left;
+							width:100%;padding:0 0 0;float:left;z-index: 20;
 						}
 	.container			{
 							
@@ -376,6 +396,11 @@ Main slides
 	background-image: url(../img/backgrounds/9.jpg);
 }
 
+/*
+	
+Lets add some extras to the front page
+	
+*/
 .iosSlider .slider .item .captionWrapper {
 	.noSelect;
 	color:@white;
@@ -385,6 +410,13 @@ Main slides
 	position:relative;
 	padding:0 20px;
 }
+	.hero {
+		width:600px;
+		height:600px;
+		background:@black;
+		position:absolute;
+		bottom:0;
+	}
 	.iosSlider .slider .item .captionInner {
 		//background:rgba(0,0,0,0.3);
 		padding:20px 20px 10px;
