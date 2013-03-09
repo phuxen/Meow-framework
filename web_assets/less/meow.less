@@ -121,7 +121,7 @@ MAIN ELEMENTS
 		/* INTRODUCTION ON THE WEBSITE */
 		.aboutMe		{
 							width:100%;
-							background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
+							//background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
 							overflow:hidden;
 							margin:20px 0 0;
 						}
@@ -384,16 +384,16 @@ Main slides
 */
 
 .iosSlider .slider .item1 {
-	background-image: url(../img/backgrounds/6.jpg);
+	background-image: url(../img/backgrounds/hero1.jpg);
 }
 .iosSlider .slider .item2 {
-	background-image: url(../img/backgrounds/3.jpg);
+	background-image: url(../img/backgrounds/hero2.jpg);
 }
 .iosSlider .slider .item3 {
-	background-image: url(../img/backgrounds/2.jpg);
+	background-image: url(../img/backgrounds/hero3.jpg);
 }
 .iosSlider .slider .item4 {
-	background-image: url(../img/backgrounds/9.jpg);
+	background-image: url(../img/backgrounds/6.jpg);
 }
 
 /*
@@ -411,12 +411,16 @@ Lets add some extras to the front page
 	padding:0 20px;
 }
 	.hero {
-		width:600px;
-		height:600px;
-		background:@black;
-		position:absolute;
-		bottom:0;
+		
 	}
+		.hero img {
+			margin: 0 auto;
+			display: block;
+			max-width: 90%;
+			position:absolute;
+			bottom:0;
+			left:0;
+		}
 	.iosSlider .slider .item .captionInner {
 		//background:rgba(0,0,0,0.3);
 		padding:20px 20px 10px;
