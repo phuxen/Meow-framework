@@ -7,7 +7,9 @@
 
 /* =========================================================================================
 
+
 GLOBAL
+
 
 ========================================================================================= */
 html	{
@@ -19,7 +21,7 @@ body	{
 	font-family:@bodyFamily; 
 	font-weight: 300;
 	line-height:1.6;
-	background:url(../img/backgrounds/noisy_net.png) top center repeat @white;
+	background:url(../img/backgrounds/noisy_net.png) top center repeat @black;
 }
 	
 	body.home {
@@ -29,7 +31,9 @@ body	{
 	}
 /* =========================================================================================
 
+
 NAVIGATION
+
 
 ========================================================================================= */
 .navbar					{
@@ -38,7 +42,7 @@ NAVIGATION
 							position:fixed;width:100%;
 							z-index:10;
 							text-align:left;
-							padding:12px 0;
+							padding:12px 20px;
 							box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
 							-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
 							-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
@@ -52,10 +56,6 @@ NAVIGATION
 								position:absolute;
 								//top:0;
 								//left:0;
-								.brand {
-									font-size:@bodyFontSize + 10;
-									line-height:0.8;
-								}
 							}
 						}
 	.navbarInner		{
@@ -66,29 +66,44 @@ NAVIGATION
 		.navbarInner h1.brand			{
 											color:@white;
 											font-family: "GandhiSansRegular", Helvetica, Arial, "Lucida Grande", sans-serif; 
-											font-size:@bodyFontSize + 5;
+											font-size:@bodyFontSize;
 											font-weight:normal;
-											text-shadow: 0 -1px 0 (@navGradTop - 40%);
+											//text-shadow: 0 -1px 0 (@navGradTop - 40%);
 											text-transform:none;
 											margin-bottom:0;
 											display:block;
 											float:left;
 										}
+			ul.brand	{
+				list-style:none;
+				float:left;
+			}
 			ul.nav		{
 				list-style:none;
 				float:right;
 			}
-				ul.nav li {
+				.navbar ul li {
 					float:left;
 					padding:0 10px 0 0;
 				}
-					ul.nav li a {
+					.navbar ul li a {
 						color: @white;
-					}		
+						.transition(0.5s);
+						text-shadow: 0 0 3px rgba(255,255,255,0.3);
+						font-size:@bodyFontSize + 2;
+						font-family: @headerFamily;
+						&:hover {
+							text-decoration:none;
+							color: @grayLight;
+						}
+					}
+					
 			
 /* =========================================================================================
 
+
 MAIN ELEMENTS
+
 
 ========================================================================================= */			
 .wrapper				{
@@ -101,11 +116,13 @@ MAIN ELEMENTS
 		#work			{
 							position:relative;
 							height:98%;
+							background:url(../img/backgrounds/noisy_net_dark.png) top center repeat @black;
+							border-bottom:1px solid (lighten(@black, 15%));
 						}
 			.sliderWrap		{
 								//width:100%;
 								//height:400px;
-								background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
+								//background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
 								overflow:hidden;
 							}
 			.articleWrap	{
@@ -139,7 +156,9 @@ MAIN ELEMENTS
 									}
 /* =========================================================================================
 
+
 FOOTER
+
 
 ========================================================================================= */
 #footerWrapper			{
@@ -166,55 +185,11 @@ FOOTER
 										}
 						}
 	
-
 /* =========================================================================================
 
-Work section
 
-========================================================================================= */
-.workPreviewWrapper	{
-	width:((@siteWidthFull/100)*50)-30;
-	overflow:hidden;
-	float:left;
-	text-align:center;
-	margin-right:20px;
-	&.last {
-		margin-right:0;
-	}
-	& h1 {
-		.transition(.1s linear all);
-	}
-	&:hover h1 {
-		color:@themeColor;
-	}
-	&:hover .workPreviewImage {
-		.transition(.2s linear all);
-		border-color:@themeColor;
-	}
-	
-}
-	.workPreviewImage {
-		border:4px solid @grayLight;
-		overflow:hidden;
-		margin:0 0 10px;
-		height:((@siteWidthFull/100)*50)-30;
-		& img {
-			float:left;
-		}
-		&.test {
-			background:url(../img/huxen/huxenHead.png) no-repeat center center transparent;
-		}
-		&.kids {
-			background:url(../img/LTKD/ltkd3.jpg) no-repeat center center transparent;
-		}
-		&.society6 {
-			background:url(../img/shop/Framed_UnoriginalPhotographyIdea.jpg) no-repeat center center transparent;
-		}
-	}
+RESUMÉ
 
-/* =========================================================================================
-
-About me section
 
 ========================================================================================= */
 .cvSec 				{
@@ -227,7 +202,9 @@ About me section
 
 /* =========================================================================================
 
+
 BUTTONS
+
 
 ========================================================================================= */
 .btn		{
@@ -239,6 +216,7 @@ BUTTONS
 	border-style: solid;
 	border-width: 0 0 2px;
 	color:@grayDark;
+	font-family:@secondFamily;
 	font-weight:normal;
 	font-size:@bodyFontSize;
 	//font-weight:bold;
@@ -345,7 +323,9 @@ BUTTONS
 		}
 /* =========================================================================================
 
+
 SLIDER
+
 
 ========================================================================================= */
 .sliderContainer {
@@ -354,6 +334,7 @@ SLIDER
 	bottom: 0;
 	left: 0;
 	right: 0;
+	border-bottom:2px solid @black;
 }
 
 .iosSlider {
@@ -384,10 +365,10 @@ Main slides
 */
 
 .iosSlider .slider .item1 {
-	background-image: url(../img/backgrounds/hero1.jpg);
+	//background-image: url(../img/backgrounds/hero1.jpg);
 }
 .iosSlider .slider .item2 {
-	background-image: url(../img/backgrounds/hero2.jpg);
+	//background-image: url(../img/backgrounds/hero2.jpg);
 }
 .iosSlider .slider .item3 {
 	background-image: url(../img/backgrounds/hero3.jpg);
@@ -431,6 +412,11 @@ Lets add some extras to the front page
 			bottom:50px;
 			right:0;
 		}
+		.iosSlider .slider .item2 .captionInner {
+			position:absolute;
+			bottom:50px;
+			right:0;
+		}
 
 /* Buttons */
 .iosSliderButtons {
@@ -463,7 +449,9 @@ Lets add some extras to the front page
 }
 /* =========================================================================================
 
+
 QUOTE
+
 
 ========================================================================================= */
 .blockquoteWrapper {
@@ -621,7 +609,7 @@ MOBILE & TABLETS
 	.btn {
 		width:100%;padding:16px 15px;
 		&.flat {
-			width:auto;
+			//width:auto;
 		}
 	}
 	.btnGroup .btn 				{width:auto;}

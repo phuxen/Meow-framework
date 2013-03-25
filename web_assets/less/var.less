@@ -31,24 +31,31 @@
 @purple:            #7a43b6;
 
 	@themeColor:		@pinkLight; //3a547b
-	@themeColorDark:	lighten(@themeColor, -10%);
+	@themeColorDark:	lighten(@themeColor, -20%);
 	
 	@backgroundColor:	lighten(@themeColor, 50%);
 	
 	@navColor:			@grayDark;
 	
 /* -----------------------------------------------------------------------------------------
-	Typography
------------------------------------------------------------------------------------------ */
-@headerColor:		@grayLighter;/*#00142a; 29343f*/
-@bodyColor:			@gray;/*#3a546f;*/
 
-// Links
-@linkColor:         @themeColor;
-@linkColorHover:    lightness(#b6944a, 10%);
+TYPOGRAPHY
+
+----------------------------------------------------------------------------------------- */
 
 @bodyFontSize:		18px;
-@bodyFamily:		"GandhiSansRegular", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+//@bodyFamily:		"GandhiSansRegular", Helvetica, Arial, "Lucida Grande", sans-serif;
+@bodyFamily:		georgia, georgia, serif;
+
+@headerFamily:		"GandhiSansBold", Helvetica, Arial, "Lucida Grande", sans-serif;
+//@headerFamily:		futura, futura, helvetica, arial, sans-serif;
+
+@secondFamily:		"GandhiSansRegular", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+
+@bodyColor:			@gray;/*#3a546f;*/
+@headerColor:		@grayLighter;/*#00142a; 29343f*/
 	
 	// Navigation
 	@navGradTop:		@themeColor; /*lighten(#3a546f, -15%);*/
@@ -58,6 +65,10 @@
 	// Buttons
 	@btnPrimary:		@themeColor;
 	@btnSecondary:		(lighten(@btnPrimary, -8%));
+	
+	// Links
+	@linkColor:         @themeColor;
+	@linkColorHover:    lightness(@themeColor, -30%);
 
 /* -----------------------------------------------------------------------------------------
 
