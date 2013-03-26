@@ -149,11 +149,14 @@ MAIN ELEMENTS
 								width:(@siteWidthFull/100)*60;float:left;padding:0 0 20px 40px;
 							}
 				.aboutPhoto	{
-								width:(@siteWidthFull/100)*30;float:left;text-align:center;margin:20px 0 40px;
+								width:(@siteWidthFull/100)*30;float:left;text-align:center;margin:20px 0;
 							}
 					.aboutPhoto img {
-										margin:0 auto 20px;display:block;.roundCorners(500px);
+										border:3px solid @grayLighter;margin:0 auto 20px;display:block;.roundCorners(500px);
 									}
+					.caption		{
+						display: inline-block;width: 70%;color: @grayDark;font-family: @serifFamily;font-style: italic;line-height:1.4;
+					}
 /* =========================================================================================
 
 
@@ -245,7 +248,7 @@ BUTTONS
 	}
 	&.flat {
 		//border-width:1px;
-		padding:7px 10px 7px;
+		padding:8px 10px;
 		text-transform:none;
 		font-weight:normal;
 	}
@@ -365,10 +368,10 @@ Main slides
 */
 
 .iosSlider .slider .item1 {
-	//background-image: url(../img/backgrounds/hero1.jpg);
+	background-image: url(../img/backgrounds/hero1.jpg);
 }
 .iosSlider .slider .item2 {
-	//background-image: url(../img/backgrounds/hero2.jpg);
+	background-image: url(../img/backgrounds/hero2.jpg);
 }
 .iosSlider .slider .item3 {
 	background-image: url(../img/backgrounds/hero3.jpg);
@@ -459,13 +462,14 @@ QUOTE
 	float:left;
 }
 blockquote {
+	border-top:1px dashed @grayDarker;
 	//color:@grayLight;
-	font-family: Georgia, serif;
+	font-family: @serifFamily;
 	font-size: @bodyFontSize;
 	font-style: italic;
 	//width: 500px;
-	margin: 0.25em 0;
-	padding: 0 30px 0 40px;
+	margin: 30px 0;
+	padding: 30px 30px 0px 40px;
 	//line-height: 1.45;
 	position: relative;
 	//color: #383838;
@@ -479,7 +483,7 @@ blockquote:before {
 	font-size: 80px;
 	position: absolute;
 	left: -10px;
-	top: -20px;
+	top: 5px;
 	color: @grayDarker;
 }
 blockquote:after {
