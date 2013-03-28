@@ -42,7 +42,7 @@ NAVIGATION
 							position:fixed;width:100%;
 							z-index:10;
 							text-align:left;
-							padding:8px 0px 6px;
+							padding:8px 20px 6px;
 							box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
 							-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
 							-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
@@ -422,7 +422,7 @@ Lets add some extras to the front page
 
 /* Buttons */
 .iosSliderButtons {
-	width:@siteWidthFull;
+	//width:@siteWidthFull;
 	height: 10px;
 	//background:@black;
 	margin:0 auto;
@@ -430,7 +430,11 @@ Lets add some extras to the front page
 	bottom:30px;
 	position:relative;
 }
-
+	.iosSliderButtonsInner {
+		margin:0 auto;
+		height:15px;
+		width:@siteWidthFull;
+	}
 .iosSliderButtons .button {
 	float: left;
 	width: 15px;
@@ -532,7 +536,7 @@ BLOG
 /* =========================================================================================
 
 
-MOBILE & TABLETS
+TABLETS
 
 
 ========================================================================================= */
@@ -548,7 +552,8 @@ MOBILE & TABLETS
 	.aboutPhoto,
 	.huxenIntro,
 	.aboutMeInner,
-	.iosSlider .slider .item .captionWrapper				{width:@siteWidthMid;}
+	.iosSlider .slider .item .captionWrapper,
+	.iosSliderButtonsInner		{width:@siteWidthMid;}
 	
 	//.aboutCopy				{width:100%;padding-left:0;}
 	//.articleCopy				{width:100%;padding-right:0;}
@@ -561,6 +566,13 @@ MOBILE & TABLETS
 	.itemPurchaseInfo			{width:(@siteWidthMid/100)*30;}
 }
 
+/* =========================================================================================
+
+
+MOBILE
+
+
+========================================================================================= */
 @media screen and (max-width: 719px) {
 		
 	.homeTitle 					{text-align:center;}
@@ -569,46 +581,21 @@ MOBILE & TABLETS
 	.articleWrap,
 	#footerWrapperInner,
 	.itemPurchaseInfo,
-	.aboutMe,
 	.aboutPhoto,
 	.huxenIntro,
 	.aboutMeInner,
 	.iosSlider .slider .item .captionWrapper,
-	.iosSlider .slider .item .captionInner				{width:100%;}
+	.iosSlider .slider .item .captionInner,
+	.iosSliderButtonsInner				{width:@siteWidthMob;}
 		.huxenWrapper,
 		.huxenDisclaimer		{display:none;}
+		
+	.aboutMeInner				{padding:0;}
 	
-	#work						{height:300px;}
+	#work						{height:240px;}
 	
-	.aboutCopy					{width:100%;padding-left:0;}
-	.articleCopy				{width:100%;padding-right:0;}
-	
-	/* ===================================================================================
-	SLIDER
-	=================================================================================== */
-	.sliderWrap {
-		height:300px;
-	}
-		.slide {
-			width:300px;
-			height:300px;
-			&:hover {
-				
-			}
-			&.last {
-				margin:0;
-			}
-			&.slideLTKD {
-				//width:420px;
-			}
-			&.slideSociety6 {
-				//width:420px;
-			}
-			& img {
-				width:300px;
-				height:auto;
-			}
-		}
+	.aboutCopy					{width:@siteWidthMob;padding-left:0;}
+	.articleCopy				{width:@siteWidthMob;padding-right:0;}
 	
 	/* ===================================================================================
 	BUTTON
