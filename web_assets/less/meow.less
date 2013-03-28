@@ -42,20 +42,14 @@ NAVIGATION
 							position:fixed;width:100%;
 							z-index:10;
 							text-align:left;
-							padding:12px 20px;
+							padding:8px 0px 6px;
 							box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
 							-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
 							-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
 							//display:none;
 							&.alt {
-								border-bottom:none;
-								box-shadow:none;
-								-moz-box-shadow:none;
-								-webkit-box-shadow:none;
-								background:none;
-								position:absolute;
-								//top:0;
-								//left:0;
+								position:relative;
+								float:left;
 							}
 						}
 	.navbarInner		{
@@ -84,17 +78,18 @@ NAVIGATION
 			}
 				.navbar ul li {
 					float:left;
-					padding:0 10px 0 0;
+					padding:0 15px 0 0;
 				}
 					.navbar ul li a {
 						color: @white;
 						.transition(0.5s);
-						text-shadow: 0 0 3px rgba(255,255,255,0.3);
-						font-size:@bodyFontSize + 2;
-						font-family: @headerFamily;
+						//text-shadow: 0 0 3px rgba(255,255,255,0.3);
+						font-size:@bodyFontSize;
+						font-family: @bodyFamily;
 						&:hover {
 							text-decoration:none;
-							color: @grayLight;
+							//color: @black;
+							opacity:0.6;
 						}
 					}
 					
@@ -114,11 +109,12 @@ MAIN ELEMENTS
 							
 						}
 		#work			{
+							width:100%;
 							position:relative;
 							//height:98%;
-							height:748px;
+							height:650px;
 							background:url(../img/backgrounds/noisy_net_dark.png) top center repeat @black;
-							border-bottom:1px solid (lighten(@black, 15%));
+							border-bottom:1px solid (lighten(@black, 18%));
 						}
 			.sliderWrap		{
 								//width:100%;
@@ -141,7 +137,7 @@ MAIN ELEMENTS
 							width:100%;
 							//background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
 							overflow:hidden;
-							margin:20px 0 0;
+							margin:10px 0 0;
 						}
 			.aboutMeInner	{
 								width:@siteWidthFull;margin:0 auto;padding:20px 20px 40px;clear:both;
@@ -153,7 +149,8 @@ MAIN ELEMENTS
 								width:(@siteWidthFull/100)*30;float:left;text-align:center;margin:20px 0;
 							}
 					.aboutPhoto img {
-										border:3px solid @grayLighter;margin:0 auto 20px;display:block;.roundCorners(500px);
+										//border:3px solid @grayLighter;
+										margin:0 auto 20px;display:block;.roundCorners(500px);
 									}
 					.caption		{
 						display: inline-block;width: 70%;color: @grayDark;font-family: @serifFamily;font-style: italic;line-height:1.4;
@@ -372,13 +369,14 @@ Main slides
 	background-image: url(../img/backgrounds/hero1.jpg);
 }
 .iosSlider .slider .item2 {
-	background-image: url(../img/backgrounds/hero2.jpg);
+	background: url(../img/backgrounds/grid.gif) repeat top left;
+	background-size: auto;
 }
 .iosSlider .slider .item3 {
-	background-image: url(../img/backgrounds/hero3.jpg);
+	background-image: url(../img/backgrounds/hero5.jpg);
 }
 .iosSlider .slider .item4 {
-	background-image: url(../img/backgrounds/6.jpg);
+	background-image: url(../img/backgrounds/hero2.jpg);
 }
 
 /*
@@ -401,7 +399,7 @@ Lets add some extras to the front page
 		.hero img {
 			margin: 0 auto;
 			display: block;
-			max-width: 90%;
+			max-width: 100%;
 			position:absolute;
 			bottom:0;
 			left:0;
