@@ -114,7 +114,8 @@ MAIN ELEMENTS
 							position:relative;
 							//height:98%;
 							height:650px;
-							background:url(../img/backgrounds/noisy_net_dark.png) top center repeat @black;
+							//background:url(../img/backgrounds/noisy_net_dark.png) top center repeat @black;
+							background: url(../img/backgrounds/grid.gif) repeat top left;
 							border-bottom:1px solid (lighten(@black, 18%));
 						}
 			.sliderWrap		{
@@ -160,15 +161,103 @@ MAIN ELEMENTS
 							display: inline-block;width: 70%;color: @grayDark;font-family: @serifFamily;font-style: italic;line-height:1.4;
 						}
 						
-		.quoteWrap		{
-							width:100%;
-							//background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
-							overflow:hidden;
-							margin:0;
+
+/* =========================================================================================
+
+
+QUOTE
+
+
+========================================================================================= */
+.quoteWrap		{
+					width:100%;
+					//background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
+					overflow:hidden;
+					margin:0;
+				}
+	.quoteWrapInner	{
+						width:@siteWidthFull;margin:0 auto;padding:0 0 40px;clear:both;
+					}
+
+.blockquoteWrapper {
+	width:100%;
+	float:left;
+}
+	blockquote {
+		border-top:1px dashed @grayDarker;
+		border-bottom:1px dashed @grayDarker;
+		//color:@grayLight;
+		font-family: @serifFamily;
+		font-size: @bodyFontSize;
+		font-style: italic;
+		//width: 500px;
+		margin: 10px 0 0;
+		padding: 30px 30px 20px 40px;
+		//line-height: 1.45;
+		position: relative;
+		//color: #383838;
+	}
+		blockquote:before {
+			display: block;
+			content: "\201C";
+			font-size: 80px;
+			position: absolute;
+			left: -10px;
+			top: 5px;
+			color: @grayDarker;
+		}
+		blockquote:after {
+			display: block;
+			content: "\201D";
+			font-size: 80px;
+			position: absolute;
+			right: 0;
+			bottom: 10px;
+			color: @grayDarker;
+		}
+	blockquote cite {
+		//color: #999999;
+		font-family:@bodyFamily;
+		font-size: @bodyFontSize;
+		display: block;
+		margin-top: 5px;
+		//border-top:@grayLight 1px solid;
+		//padding:20px 0 0;
+		margin:20px 0 0;
+		text-align:right;
+	}
+		blockquote cite:before {
+			//content: "\2014 \2009";
+		}
+/* =========================================================================================
+
+
+RESUMÉ
+
+
+========================================================================================= */
+.resumeWrap {
+	width:@siteWidthFull;margin:0 auto;padding:0 20px;clear:both;
+}
+	.resumeSection {
+		float:left;
+		padding-right:30px;
+		width:50%;
+		&.end {
+			padding-right:0;
+		}
+	}
+		.cvSec h3 		{
+							margin-bottom:0;
 						}
-			.quoteWrapInner	{
-								width:@siteWidthFull;margin:0 auto;padding:0 0 40px;clear:both;
-							}
+.footnote {
+	//border-top:1px solid @grayDarker;
+	padding:10px 0 0;
+	//text-align:right;
+	width:100%;
+}
+	/*.footnote p,
+	.footnote a {font-style: italic;}
 /* =========================================================================================
 
 
@@ -199,21 +288,6 @@ FOOTER
 											padding-left: 0;
 										}
 						}
-	
-/* =========================================================================================
-
-
-RESUMÉ
-
-
-========================================================================================= */
-.cvSec 				{
-						margin:0 0 20px;float:left;
-						//border-bottom:1px dashed (lighten(@gray, 5%));
-					}
-	.cvSec h3 		{
-						margin-bottom:0;
-					}
 
 /* =========================================================================================
 
@@ -380,17 +454,17 @@ Main slides
 */
 
 .iosSlider .slider .item1 {
-	background-image: url(../img/backgrounds/hero1.jpg);
+	//background-image: url(../img/backgrounds/hero1.jpg);
 }
 .iosSlider .slider .item2 {
-	background: url(../img/backgrounds/gridDark.gif) repeat top left;
+	//background: url(../img/backgrounds/grid.gif) repeat top left;
 	background-size: auto;
 }
 .iosSlider .slider .item3 {
-	background-image: url(../img/backgrounds/hero5.jpg);
+	//background-image: url(../img/backgrounds/hero5.jpg);
 }
 .iosSlider .slider .item4 {
-	background-image: url(../img/backgrounds/hero2.jpg);
+	//background-image: url(../img/backgrounds/hero2.jpg);
 }
 
 /*
@@ -454,7 +528,7 @@ Lets add some extras to the front page
 	width: 15px;
 	height: 15px;
 	background: transparent;
-	border:2px solid @white;
+	border:2px solid @navGradTop;
 	margin: 0 10px 0 0;
 	opacity: 0.5;
 	.roundCorners(50px);
@@ -464,69 +538,9 @@ Lets add some extras to the front page
 		opacity:0.75;
 	}
 .iosSliderButtons .selected {
-	background: @white;
+	background: @navGradTop;
 	opacity: 1;
-}
-/* =========================================================================================
-
-
-QUOTE
-
-
-========================================================================================= */
-.blockquoteWrapper {
-	width:100%;
-	float:left;
-}
-blockquote {
-	border-top:1px dashed @grayDarker;
-	//color:@grayLight;
-	font-family: @serifFamily;
-	font-size: @bodyFontSize;
-	font-style: italic;
-	//width: 500px;
-	margin: 10px 0 30px;
-	padding: 30px 30px 0px 40px;
-	//line-height: 1.45;
-	position: relative;
-	//color: #383838;
-}
-	bloackquote p {
-		
-	}
-blockquote:before {
-	display: block;
-	content: "\201C";
-	font-size: 80px;
-	position: absolute;
-	left: -10px;
-	top: 5px;
-	color: @grayDarker;
-}
-blockquote:after {
-	display: block;
-	content: "\201D";
-	font-size: 80px;
-	position: absolute;
-	right: 0;
-	bottom: 10px;
-	color: @grayDarker;
-}
-blockquote cite {
-	//color: #999999;
-	font-family:@bodyFamily;
-	font-size: @bodyFontSize;
-	display: block;
-	margin-top: 5px;
-	//border-top:@grayLight 1px solid;
-	//padding:20px 0 0;
-	margin:20px 0 0;
-	text-align:right;
-}
- 
-blockquote cite:before {
-	//content: "\2014 \2009";
-}		
+}	
 /* =========================================================================================
 
 
@@ -567,6 +581,7 @@ TABLETS
 	.huxenIntro,
 	.aboutMeInner,
 	.quoteWrapInner,
+	.resumeWrap,
 	.iosSlider .slider .item .captionWrapper,
 	.iosSliderButtonsInner		{width:@siteWidthMid;}
 	
@@ -602,6 +617,7 @@ MOBILE
 	.huxenIntro,
 	.aboutMeInner,
 	.quoteWrapInner,
+	.resumeWrap,
 	.iosSlider .slider .item .captionWrapper,
 	.iosSlider .slider .item .captionInner,
 	.iosSliderButtonsInner				{width:@siteWidthMob;}

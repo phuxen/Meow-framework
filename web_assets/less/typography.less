@@ -23,8 +23,8 @@ h1, h2, h3, h4, h5		{
 	//letter-spacing:2px;
 }
 h1{
-	font-family: @headerFamily;
 	color:@headerColor;
+	font-family: @headerFamily;
 	font-size:@bodyFontSize + 30;
 	line-height:1.2;
 	margin-bottom:15px;
@@ -38,8 +38,8 @@ h1{
 	}
 }
 h2{
-	font-family: @headerFamily;
 	color:@headerColor;
+	font-family: @headerFamily;
 	font-size:@bodyFontSize + 18;
 	line-height:1.2;
 	margin-bottom:15px;
@@ -50,8 +50,8 @@ h2{
 	}
 }
 h3{
-	font-family: @headerFamily;
 	color:@headerColor;
+	font-family: @headerFamily;
 	font-size:@bodyFontSize + 12;
 	line-height:1.2;
 	margin-bottom:5px;
@@ -61,10 +61,20 @@ h3{
 	}
 }
 h4{
+	color:@headerColor;
 	font-family: @headerFamily;
 	font-size:@bodyFontSize + 4;
 	line-height:1.2;
 	margin-bottom:10px;
+	& em {
+		text-transform:none;
+		color:@bodyColor;
+	}
+}
+h5{
+	color:@headerColor;
+	font-family: @bodyFamily;
+	font-size:@bodyFontSize;
 	& em {
 		text-transform:none;
 		color:@bodyColor;
@@ -77,7 +87,7 @@ p+p			{text-indent:30px;}
 em			{font-style:italic;font-weight:normal;font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;}
 strong		{font-weight:normal;font-family: "GandhiSansBold", Helvetica, Arial, "Lucida Grande", sans-serif;}
 
-a						{color:@linkColor;text-decoration:none;}
+a						{color:@linkColor;text-decoration:none;.transition(.1s linear all);}
 a:hover					{color:@linkColorHover;text-decoration:underline;}
 
 .superscript			{vertical-align:super;font-size:70%;} 
