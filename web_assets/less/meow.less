@@ -192,7 +192,7 @@ QUOTE
 		font-style: italic;
 		//width: 500px;
 		margin: 10px 0 0;
-		padding: 30px 30px 20px 40px;
+		padding: 30px 50px 20px 50px;
 		//line-height: 1.45;
 		position: relative;
 		//color: #383838;
@@ -202,7 +202,7 @@ QUOTE
 			content: "\201C";
 			font-size: 80px;
 			position: absolute;
-			left: -10px;
+			left:5px;
 			top: 5px;
 			color: @grayDarker;
 		}
@@ -211,7 +211,7 @@ QUOTE
 			content: "\201D";
 			font-size: 80px;
 			position: absolute;
-			right: 0;
+			right: 15px;
 			bottom: 10px;
 			color: @grayDarker;
 		}
@@ -241,10 +241,11 @@ RESUMÉ
 }
 	.resumeSection {
 		float:left;
-		padding-right:30px;
+		padding-right:10px;
 		width:50%;
 		&.end {
 			padding-right:0;
+			padding-left:10px;
 		}
 	}
 		.cvSec h3 		{
@@ -617,20 +618,27 @@ MOBILE
 	.huxenIntro,
 	.aboutMeInner,
 	.quoteWrapInner,
-	.resumeWrap,
+	.resumeWrap				{width:100%;}
+	
 	.iosSlider .slider .item .captionWrapper,
 	.iosSlider .slider .item .captionInner,
-	.iosSliderButtonsInner				{width:@siteWidthMob;}
+	.iosSliderButtonsInner			{width:@siteWidthMob;}
+	
 		.huxenWrapper,
 		.huxenDisclaimer		{display:none;}
 		
-	.aboutMeInner				{padding:0;}
+	//.aboutMeInner				{padding:0;}
 	
 	#work						{height:240px;}
 	
-	.aboutCopy					{width:@siteWidthMob;padding-left:0;}
-	.articleCopy				{width:@siteWidthMob;padding-right:0;}
+	.aboutCopy					{width:100%;padding-left:0;}
+	.articleCopy				{width:100%;padding-right:0;}
 	
+	//.resumeWrap					{padding:0;}
+	.resumeSection					{width:100%;}
+	.resumeSection.end 				{padding-left:0px;}
+	
+	//#footerWrapperInner			{padding:0;}
 	/* ===================================================================================
 	BUTTON
 	=================================================================================== */	
