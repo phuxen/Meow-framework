@@ -5,13 +5,6 @@
 @import "iosslider.less";
 @import "../fonts/Gandhi/stylesheet.css";
 
-.pictos {
-	font-weight: normal!important; 
-	font-style: normal!important;
-	line-height: 0!important; 
-	font-family: 'Pictos', sans-serif!important;
-}
-
 /* =========================================================================================
 
 
@@ -100,7 +93,7 @@ NAVIGATION
 							opacity:0.6;
 						}
 					}
-			.navbar ul li a .pictos {font-size:25px;}		
+					
 			
 /* =========================================================================================
 
@@ -122,7 +115,7 @@ MAIN ELEMENTS
 							//height:98%;
 							height:650px;
 							//background:url(../img/backgrounds/noisy_net_dark.png) top center repeat @black;
-							background: url(../img/backgrounds/gridLight.gif) repeat top left;
+							background: url(../img/backgrounds/grid.gif) repeat top left;
 							border-bottom:1px solid (lighten(@black, 18%));
 						}
 			.sliderWrap		{
@@ -146,7 +139,7 @@ MAIN ELEMENTS
 							width:100%;
 							//background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
 							overflow:hidden;
-							margin:20px 0 0;
+							margin:10px 0 0;
 						}
 			.aboutMeInner	{
 								width:@siteWidthFull;margin:0 auto;padding:20px 20px 0;clear:both;
@@ -480,7 +473,7 @@ Main slides
 Lets add some extras to the front page
 	
 */
-.iosSlider .slider .item .HeroWrapper {
+.iosSlider .slider .item .captionWrapper {
 	.noSelect;
 	color:@white;
 	width:@siteWidthFull;
@@ -500,21 +493,12 @@ Lets add some extras to the front page
 			bottom:0;
 			left:0;
 		}
-	.iosSlider .slider .item .heroInfo {
-		position:absolute;
-		right:0;
-		bottom:0;
-		width:30%;
+	.iosSlider .slider .item .captionInner {
+		//background:rgba(0,0,0,0.3);
+		padding:20px 20px 10px;
+		width:50%;
 	}
-	
-	.iosSlider .slider .item .heroInfo h3 {
-		color:@black;
-	}
-	.iosSlider .slider .item .heroInfo p {
-		color:@grayDark;
-	}
-		/*
-.iosSlider .slider .item1 .captionInner {
+		.iosSlider .slider .item1 .captionInner {
 			position:absolute;
 			bottom:50px;
 			right:0;
@@ -524,7 +508,6 @@ Lets add some extras to the front page
 			bottom:50px;
 			right:0;
 		}
-*/
 
 /* Buttons */
 .iosSliderButtons {
@@ -600,28 +583,18 @@ TABLETS
 	.aboutMeInner,
 	.quoteWrapInner,
 	.resumeWrap,
-	.iosSlider .slider .item .HeroWrapper,
+	.iosSlider .slider .item .captionWrapper,
 	.iosSliderButtonsInner		{width:@siteWidthMid;}
 	
 	//.aboutCopy				{width:100%;padding-left:0;}
 	//.articleCopy				{width:100%;padding-right:0;}
 	
-	#work						{height:520px;}
+	#work						{height:500px;}
 	
 	.aboutCopy,
 	.articleCopy				{width:(@siteWidthMid/100)*60;}
 	.aboutPhoto,
 	.itemPurchaseInfo			{width:(@siteWidthMid/100)*30;}
-	
-	/* ===================================================================================
-	BUTTON
-	=================================================================================== */	
-	.btn {
-		padding:14px 15px;
-		&.flat {
-			//width:auto;
-		}
-	}
 }
 
 /* =========================================================================================
@@ -647,7 +620,7 @@ MOBILE
 	.quoteWrapInner,
 	.resumeWrap				{width:100%;}
 	
-	.iosSlider .slider .item .HeroWrapper,
+	.iosSlider .slider .item .captionWrapper,
 	.iosSlider .slider .item .captionInner,
 	.iosSliderButtonsInner			{width:@siteWidthMob;}
 	
@@ -676,11 +649,4 @@ MOBILE
 		}
 	}
 	.btnGroup .btn 				{width:auto;}
-	
-	.iosSlider .slider .item .heroInfo {
-		position:absolute;
-		right:0;
-		bottom:0;
-		width:60%;
-	}
 }
