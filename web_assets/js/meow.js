@@ -70,7 +70,7 @@ $(document).ready(function($){
 		navNextSelector: $('.next'),
 		navPrevSelector: $('.prev'),
 		navSlideSelector: $('.iosSliderButtons .button'),
-		infiniteSlider: true,
+		infiniteSlider: false,
 		keyboardControls: true,
 		onSlideChange: slideContentChange,
 		onSlideComplete: slideContentComplete,
