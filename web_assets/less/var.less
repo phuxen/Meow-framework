@@ -8,9 +8,9 @@
 
 // Grays
 @black:             #000;
-@grayDarker:        lighten(@black, 25%);
+@grayDarker:        lighten(@black, 15%);
 @grayDark:          lighten(@black, 35%);
-@gray:              lighten(@black, 50%);
+@gray:              lighten(@black, 60%);
 @grayLight:         lighten(@black, 75%);
 @grayLighter:       lighten(@black, 85%);
 @white:             #fff;
@@ -29,6 +29,7 @@
 @pink:              #c3325f;
 @pinkLight:          lighten(@pink, 12%);
 @purple:            #7a43b6;
+@kraken:			#53bd9f;
 
 	@themeColor:		@pinkLight; //3a547b
 	@themeColorDark:	lighten(@themeColor, -20%);
@@ -63,7 +64,7 @@ TYPOGRAPHY
 @headerColor:		@grayLighter;/*#00142a; 29343f*/
 	
 	// Navigation
-	@navGradTop:		#343e46; /*lighten(#3a546f, -15%);*/
+	@navGradTop:		#343e46; /* 343e46  lighten(#3a546f, -15%);*/
 	@navGradBot:		lighten(@navGradTop, -10%);
 	@navGradHover:   	lighten(@navGradTop, -20%);    
 	
@@ -73,7 +74,7 @@ TYPOGRAPHY
 	
 	// Links
 	@linkColor:         @themeColor;
-	@linkColorHover:    lighten(@themeColor, 10%);
+	@linkColorHover:    lighten(@linkColor, 10%);
 
 /* -----------------------------------------------------------------------------------------
 
@@ -130,7 +131,7 @@ Useful classes
   #gradient > .vertical(@primaryColor, @secondaryColor);
   /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
   /* This adjusts the colour of our buttons */
-  border-color: darken(@secondaryColor, 20%);
+  border-color: darken(@secondaryColor, 10%);
   /*box-sizing: content-box;*/
 }
 .noSelect {

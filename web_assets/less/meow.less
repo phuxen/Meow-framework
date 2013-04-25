@@ -48,14 +48,13 @@ NAVIGATION
 							border-bottom: 2px solid (lighten(@navGradBot, -20%));
 							position:fixed;width:100%;
 							z-index:10;
-							text-align:left;
+							text-align:center;
 							padding:8px 20px 6px;
 							box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
 							-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
 							-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
-							//display:none;
 							&.alt {
-								position:relative;
+								position:fixed;
 								float:left;
 							}
 						}
@@ -63,18 +62,18 @@ NAVIGATION
 							width:@siteWidthFull;
 							margin:0 auto;
 							position:relative;
-							//border-bottom:1px solid (lighten(@black, 18%));
 						}
 		.navbarInner h1.brand			{
 											color:@white;
 											font-family: "GandhiSansRegular", Helvetica, Arial, "Lucida Grande", sans-serif; 
 											font-size:@bodyFontSize;
 											font-weight:normal;
-											//text-shadow: 0 -1px 0 (@navGradTop - 40%);
+											letter-spacing:1px;
+											text-shadow: 0 -1px 0 (@navGradTop - 40%);
 											text-transform:none;
 											margin-bottom:0;
 											display:block;
-											float:left;
+											float:center;
 										}
 			ul.brand	{
 				list-style:none;
@@ -308,24 +307,23 @@ BUTTONS
 	.noSelect;
 	.roundCorners(5px);
 	//padding:8px 12px 7px;
-	padding:10px 13px;
+	padding:10px 13px 8px;
 	/* Border colour variable is found in var.less - .gradientBar */
 	border-style: solid;
 	border-width: 0 0 2px;
-	color:@grayDark;
+	color:@grayDarker;
 	font-family:@secondFamily;
 	font-weight:normal;
 	font-size:@bodyFontSize;
 	//font-weight:bold;
 	line-height:14px;
 	.transition(.1s linear all);
-	.gradientBar(@grayLighter, @grayLight);
-	text-shadow: 0 -1px 0 (@white - 40%);
+	.gradientBar(@grayLighter, @gray);
+	//text-shadow: 0 -1px 0 (@white - 40%);
 	text-align:center;
 	cursor: pointer;
 	display:inline-block;
 	margin-bottom:15px;
-	//text-transform: uppercase;
 	letter-spacing:1px;
 	/* Icons */
 	.pictos {
@@ -335,7 +333,7 @@ BUTTONS
 	&:hover {
 		background-position: 0 -15px;
 		text-decoration: none;
-		color:@grayDark;
+		color:@grayDarker;
 	}
 	&:focus {
 		//outline: 1px dotted #666;
