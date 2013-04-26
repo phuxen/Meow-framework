@@ -145,13 +145,13 @@ MAIN ELEMENTS
 							width:100%;
 							//background:url(../img/backgrounds/noisy_net.png) top center repeat @themeColor;
 							overflow:hidden;
-							margin:20px 0 0;
+							margin:30px 0 0;
 						}
 			.aboutMeInner	{
-								width:@siteWidthFull;margin:0 auto;padding:20px 20px 0;clear:both;
+								width:@siteWidthFull;margin:0 auto;padding:0 20px 0;clear:both;
 							}									
 				.aboutCopy	{
-								width:(@siteWidthFull/100)*60;float:left;padding:0 0 20px 40px;
+								width:(@siteWidthFull/100)*60;float:left;padding:0 40px 20px 0;
 							}
 				.aboutPhoto	{
 								width:(@siteWidthFull/100)*30;float:left;text-align:center;margin:20px 0;
@@ -182,7 +182,7 @@ QUOTE
 					margin:0;
 				}
 	.quoteWrapInner	{
-						width:@siteWidthFull;margin:0 auto;padding:0 0 40px;clear:both;
+						width:@siteWidthFull;margin:0 auto;padding:0;clear:both;
 					}
 
 .blockquoteWrapper {
@@ -191,7 +191,6 @@ QUOTE
 }
 	blockquote {
 		border-top:1px dashed @grayDarker;
-		border-bottom:1px dashed @grayDarker;
 		//color:@grayLight;
 		font-family: @serifFamily;
 		font-size: @bodyFontSize;
@@ -243,7 +242,7 @@ RESUMÉ
 
 ========================================================================================= */
 .resumeWrap {
-	width:@siteWidthFull;margin:0 auto;padding:0 20px;clear:both;
+	width:@siteWidthFull;margin:0 auto;padding:40px 20px 0;clear:both;border-top:1px dashed @grayDarker;
 }
 	.resumeSection {
 		float:left;
@@ -603,7 +602,7 @@ TABLETS
 
 @media screen and (min-device-width: 720px) and (max-width: 1024px) {
 	/* For general iPad layouts */
-	body		{font-size:1.1em;}
+	body		{font-size:120%}
 	
 	.navbarInner,
 	.articleWrap,
@@ -649,9 +648,7 @@ MOBILE
 ========================================================================================= */
 @media screen and (max-width: 719px) {
 	
-	body		{font-size:1.1em;}
-		
-	.homeTitle 					{text-align:center;}
+	body						{font-size:120%;}
 	
 	.navbarInner,
 	.articleWrap,
@@ -661,28 +658,24 @@ MOBILE
 	.huxenIntro,
 	.aboutMeInner,
 	.quoteWrapInner,
-	.resumeWrap				{width:100%;}
+	.resumeWrap					{width:100%;}
 	
 	.iosSlider .slider .item .HeroWrapper,
 	.iosSlider .slider .item .captionInner,
-	.iosSliderButtonsInner			{width:@siteWidthMob;}
+	.iosSliderButtonsInner			{width:100%;}
 	
 		.huxenWrapper,
 		.huxenDisclaimer		{display:none;}
 		
-	//.aboutMeInner				{padding:0;}
 	
-	#work						{height:98%;}
+	#work						{height:400px;}
 	
-	.aboutCopy					{width:100%;padding-left:0;}
-	.articleCopy				{width:100%;padding-right:0;}
+	.aboutCopy					{width:100%;padding-right:0;}
+	.articleCopy				{width:100%;padding-left:0;}
 	
-	//.resumeWrap					{padding:0;}
 	.resumeSection					{width:100%;}
 	.resumeSection.end 				{padding-left:0px;}
 	
-	//#footerWrapperInner			{padding:0;}
-
 	.sliderButton,
 	.heroInfo {display:none;}
 	/* ===================================================================================
@@ -701,5 +694,11 @@ MOBILE
 		right:0;
 		bottom:0;
 		width:60%;
+	}
+	
+	
+	
+	.mobileHide {
+		display:none;
 	}
 }
