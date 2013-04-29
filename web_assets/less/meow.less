@@ -46,7 +46,7 @@ NAVIGATION
 .navbar					{
 							.gradientBar(@navGradTop, @navGradBot);
 							border-bottom: 2px solid (lighten(@navGradBot, -20%));
-							position:fixed;width:100%;
+							position:relative;width:100%;
 							z-index:10;
 							text-align:center;
 							padding:8px 20px 6px;
@@ -664,11 +664,22 @@ MOBILE
 	.iosSlider .slider .item .captionInner,
 	.iosSliderButtonsInner			{width:100%;}
 	
+	.iosSlider .slider .item .heroInfo {
+		position:absolute;
+		right:0;
+		bottom:0;
+		width:60%;
+	}
+		.hero img {
+			left: 70px;
+			max-height:100%;
+		}
+	
 		.huxenWrapper,
 		.huxenDisclaimer		{display:none;}
 		
 	
-	#work						{height:400px;}
+	#work						{height:350px;}
 	
 	.aboutCopy					{width:100%;padding-right:0;}
 	.articleCopy				{width:100%;padding-left:0;}
@@ -688,14 +699,6 @@ MOBILE
 		}
 	}
 	.btnGroup .btn 				{width:auto;}
-	
-	.iosSlider .slider .item .heroInfo {
-		position:absolute;
-		right:0;
-		bottom:0;
-		width:60%;
-	}
-	
 	
 	
 	.mobileHide {
