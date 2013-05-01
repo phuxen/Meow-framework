@@ -2,6 +2,9 @@
 <h1>Meow</h1>
 <p>Basic framework of my website, compiled in less css.</p>
 
+<h4>Some say he's the 'Patron of pixels', some say he's the 'Chief hipster of type design', others say he fucks about for a living…</h4>
+<p>Paul Huxen is a bearded & (usually) bespectacled designer who, when not quaffing copious amounts of tea, is to found designing interfaces for Burberry in jolly London town. He also uses his spare time to build a collection of fonts through Kraken Foundry.</p>
+
 <h2>Copyright and license</h2>
 <p>Copyright 2012 Paul Huxen.</p>
 
