@@ -74,7 +74,9 @@ h4{
 h5{
 	color:@headerColor;
 	font-family: @bodyFamily;
-	font-size:@bodyFontSize;
+	font-size:@bodyFontSize + 2;
+	//line-height:1.2;
+	margin-bottom:10px;
 	& em {
 		text-transform:none;
 		color:@bodyColor;
@@ -82,7 +84,7 @@ h5{
 }
 
 p,address	{margin-bottom:15px;font-size:1em;}
-p+p			{text-indent:30px;}
+
 
 em			{font-style:italic;font-weight:normal;font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;}
 strong		{font-weight:normal;font-family: "GandhiSansBold", Helvetica, Arial, "Lucida Grande", sans-serif;}
