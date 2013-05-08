@@ -255,7 +255,6 @@ TYPOGRAPHY
 ----------------------------------------------------------------------------------------- */
 /*#3a546f;*/
 /*#00142a; 29343f*/
-/* 343e46  lighten(#3a546f, -15%);*/
 /* -----------------------------------------------------------------------------------------
 
 Useful classes
@@ -654,8 +653,6 @@ NAVIGATION
   /* This adjusts the colour of our buttons */
 
   border-color: #090a0b;
-  /*box-sizing: content-box;*/
-
   border-bottom: 2px solid #000000;
   position: fixed;
   width: 100%;
@@ -961,8 +958,6 @@ BUTTONS
   /* This adjusts the colour of our buttons */
 
   border-color: #a6a6a6;
-  /*box-sizing: content-box;*/
-
   text-shadow: 0 -1px 0 #d7d7d7;
   text-align: center;
   cursor: pointer;
@@ -1018,8 +1013,6 @@ BUTTONS
   /* This adjusts the colour of our buttons */
 
   border-color: #255625;
-  /*box-sizing: content-box;*/
-
   text-shadow: 0 -1px 0 #717171;
 }
 .btn.info {
@@ -1039,8 +1032,6 @@ BUTTONS
   /* This adjusts the colour of our buttons */
 
   border-color: #0d4140;
-  /*box-sizing: content-box;*/
-
   text-shadow: 0 -1px 0 #004442;
 }
 .btn.info .pictos {
@@ -1063,8 +1054,6 @@ BUTTONS
   /* This adjusts the colour of our buttons */
 
   border-color: #6c211d;
-  /*box-sizing: content-box;*/
-
   text-shadow: 0 -1px 0 #6c0500;
 }
 .btn.alert .pictos {

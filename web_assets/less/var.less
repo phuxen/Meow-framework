@@ -15,33 +15,31 @@
 @grayLighter:       lighten(@black, 85%);
 @white:             #fff;
 
-// Accent Colors
+// Accent colours
 @blue:              #049CDB;
 @blueDark:          #0064CD;
-@mint:				      #7BF8D6;
-@mintDark:			    lighten(@mint, -35%);
+@mint:				#7BF8D6;
+@mintDark:			lighten(@mint, -35%);
 @green:             #46a546;
 @greenDark:       	lighten(@green, -12%);
 @red:               #c43c35;
-@redDark:			      lighten(@red, -12%);
+@redDark:			lighten(@red, -12%);
 @yellow:            #ffc40d;
 @orange:            #f89406;
 @pink:              #c3325f;
 @pinkLight:         lighten(@pink, 12%);
 @purple:            #7a43b6;
-@kraken:			      #53bd9f;
+@kraken:			#53bd9f;
 @teal:				#26c1bd;
 
-	@themeColor:		  @teal; //3a547b
-	@themeColorDark:	lighten(@themeColor, -20%);
-	
-	@backgroundColor:	lighten(@themeColor, 50%);
-	
-	@navColor:			@grayDark;
+// Theme colours
+@themeColor:		@teal; //3a547b
+@themeColorDark:	lighten(@themeColor, -20%);
 
-@heroImage:				650px;
-@heroInfo:				100px;
-	
+@backgroundColor:	lighten(@themeColor, 50%);
+
+@navColor:			@grayDark;
+
 /* -----------------------------------------------------------------------------------------
 
 TYPOGRAPHY
@@ -50,32 +48,26 @@ TYPOGRAPHY
 
 @bodyFontSize:		18px;
 
-@bodyFamily:		"GandhiSansRegular", Helvetica, Arial, "Lucida Grande", sans-serif;
-//@bodyFamily:		georgia, georgia, serif;
-
 @headerFamily:		"GandhiSansBold", Helvetica Bold, Arial, "Lucida Grande", sans-serif;
-//@headerFamily:		futura, futura, helvetica, arial, sans-serif;
-
+@bodyFamily:		"GandhiSansRegular", Helvetica, Arial, "Lucida Grande", sans-serif;
 @secondFamily:		"GandhiSansRegular", Helvetica, Arial, "Lucida Grande", sans-serif;
-
 @serifFamily:		Georgia, Times, "Times New Roman", serif;
-
 
 @bodyColor:			@gray;/*#3a546f;*/
 @headerColor:		@grayLighter;/*#00142a; 29343f*/
 	
-	// Navigation
-	@navGradTop:		#343e46; /* 343e46  lighten(#3a546f, -15%);*/
-	@navGradBot:		lighten(@navGradTop, -10%);
-	@navGradHover:   	lighten(@navGradTop, -20%);    
-	
-	// Buttons
-	@btnPrimary:		@themeColor;
-	@btnSecondary:		(lighten(@btnPrimary, -8%));
-	
-	// Links
-	@linkColor:         @themeColor;
-	@linkColorHover:    lighten(@linkColor, 10%);
+// Navigation - Not used now
+@navGradTop:		#343e46;
+@navGradBot:		lighten(@navGradTop, -10%);
+@navGradHover:   	lighten(@navGradTop, -20%);    
+
+// Buttons
+@btnPrimary:		@themeColor;
+@btnSecondary:		(lighten(@btnPrimary, -8%));
+
+// Links
+@linkColor:         @themeColor;
+@linkColorHover:    lighten(@linkColor, 10%);
 
 /* -----------------------------------------------------------------------------------------
 
@@ -133,7 +125,6 @@ Useful classes
   /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
   /* This adjusts the colour of our buttons */
   border-color: darken(@secondaryColor, 10%);
-  /*box-sizing: content-box;*/
 }
 .noSelect {
     -webkit-touch-callout: none;
