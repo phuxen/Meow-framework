@@ -87,8 +87,16 @@ p,address	{margin-bottom:15px;font-size:1em;}
 em			{font-style:italic;font-weight:normal;font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;}
 strong		{font-weight:normal;font-family: "GandhiSansBold", Helvetica, Arial, "Lucida Grande", sans-serif;}
 
-a						{color:@linkColor;text-decoration:none;.transition(.1s linear all);}
-a:hover					{color:@linkColorHover;text-decoration:underline;}
+a			{
+				color:@linkColor;
+				text-decoration:none;
+				.transition(.1s linear all);
+			}
+a:hover		{
+				color:@linkColorHover;
+				//text-decoration:underline;
+				cursor:pointer;
+			}
 
 .superscript			{vertical-align:super;font-size:70%;} 
 .subscript				{vertical-align:bottom;font-size:70%;} 
