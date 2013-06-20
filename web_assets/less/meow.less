@@ -117,7 +117,8 @@ MAIN ELEMENTS
 		#work			{
 							width:100%;
 							position:relative;
-							height:620px;
+							//height:620px;
+							height:98%;
 							background:url(../img/backgrounds/hero1_a.jpg) top center repeat #cbc8bf;
 							background-size:cover;
 							border-bottom:1px solid (lighten(@black, 18%));
@@ -164,7 +165,12 @@ INTRODUCTION ON HOMEPAGE
 									
 								}
 				.caption		{
-					display: inline-block;width: 70%;color: @grayDark;font-family: @serifFamily;font-style: italic;line-height:1.4;
+					display:inline-block;
+					width:70%;
+					color:@grayDark;
+					font-family:@serifFamily;
+					font-style:italic;
+					line-height:1.4;
 				}
 
 /* =========================================================================================
@@ -483,12 +489,21 @@ Lets add some extras to the front page
 			width:55%;
 		}
 	}
+		.iosSlider .slider .slide1 {
+			background:url(../img/HeroBW_b.png);
+			background-size: cover;
+			background-position: 50% 50%;
+		}
+		.iosSlider .slider .slide2 {
+			background-size: cover;
+			background-position: 50% 50%;
+		}
 	
 	.iosSlider .slider .item .heroInfo h3 {
 		color:@black;
 	}
 	.iosSlider .slider .item .heroInfo p {
-		color:@grayDark;
+		color:@grayLighter;
 	}
 
 	/* ---
@@ -597,7 +612,10 @@ TABLETS
 	//.aboutCopy				{width:100%;padding-left:0;}
 	//.articleCopy				{width:100%;padding-right:0;}
 	
-	#work						{height:480px;}
+	#work {
+		//height:480px;
+		height:98%;
+	}
 	
 	.aboutCopy,
 	.articleCopy				{width:(@siteWidthMid/100)*60;}
@@ -636,7 +654,7 @@ MOBILE
 	.resumeWrap					{width:100%;}
 	
 	#work {
-		height:0px;
+		//height:0px;
 	}
 		/* ---
 		Slider here
@@ -656,38 +674,43 @@ MOBILE
 				left: 70px;
 				max-height:100%;
 			}
+		.iosSlider .slider .slide1 {
+			background-position: 30% 50%;
+		}
 		/* ---
 		End slider
 		--- */
 
 	.wrapper {
-		margin:-30px 0 0;
-		z-index:99;
+		//margin:-30px 0 0;
+		//z-index:99;
 	}
 		.aboutMe {
-			margin:0;
+			//margin:0;
 		}
 			.aboutMeInner {
 				padding:0;
 			}
 				.aboutPhoto {
-					background:url(../img/backgrounds/hero1.jpg) top center repeat @themeColor;
-					background-size:cover;
-					padding:40px 0 0;
-					height:	150px;
-					position:relative;
-					border-bottom:2px solid @black;
+					//background:url(../img/backgrounds/hero1.jpg) top center repeat @themeColor;
+					//background-size:cover;
+					//padding:40px 0 0;
+					//height:	150px;
+					//position:relative;
+					//border-bottom:2px solid @black;
 				}
 					.aboutPhotoInner {
-						position:absolute;
-						bottom:-100px;
-						width:100%;
+						//position:absolute;
+						//bottom:-100px;
+						//width:100%;
 					}
 						.aboutPhotoWrap {
 							
 						}
 				.aboutCopy {
-					width:100%;padding:80px 20px 0;
+					width:100%;
+					//padding:80px 20px 0;
+					padding:0 20px;
 				}
 		
 	.resumeSection					{width:100%;}
